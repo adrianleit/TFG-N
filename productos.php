@@ -26,8 +26,7 @@
             <div class="container">
                 <div class="row m-b-20">
                     <div class="col-lg-6 p-t-10 m-b-20">
-                        <h3 class="m-b-20">A Monochromatic Spring ’15</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, sit, exercitationem, consequuntur, assumenda iusto eos commodi alias.</p>
+                        <h2 class="m-b-20">Sudaderas Casablanca</h2>
                     </div>
                     <div class="col-lg-3">
                         <div class="order-select">
@@ -79,27 +78,27 @@
                                 [5] => Marca
                                 [6] => Comentario
                                 [7] => Sexo
-                            */
+                                */
 
                                 while ($fila = mysqli_fetch_row($resultado)) {
                                     echo ("<div class='grid-item'>");
                                     echo ("<div class='product'>");
                                     echo ("<div class='product-image'>");
-                                    echo ("<a href='#'><img alt='Shop product image!' src='images/shop/products/1.jpg'>");
+                                    echo ("<a href='shop-single-product.php?id=$fila[2]'><img alt='Shop product image!' src='images/shop/products/1.jpg'>");
                                     echo ("</a>");
-                                    echo ("<a href='#'><img alt='Shop product image!' src='images/shop/products/10.jpg'>");
+                                    echo ("<a href='shop-single-product.php?id=$fila[2]'><img alt='Shop product image!' src='images/shop/products/10.jpg'>");
                                     echo ("</a>");
                                     echo ("<span class='product-wishlist'>");
                                     echo ("<a href='#'><i class='fa fa-heart'></i></a>");
                                     echo ("</span>");
                                     echo ("<div class='product-overlay'>");
-                                    echo ("<a href='shop-product-ajax-page.html' data-lightbox='ajax'>Quick View</a>");
+                                    echo ("<a href='shop-single-product.php?id=$fila[2]' id='vista_rapida'>Ir al producto</a>");
                                     echo ("</div>");
                                     echo ("</div>");
                                     echo ("<div class='product-description'>");
-                                    echo ("<div class='product-category'>Women</div>");
+                                    echo ("<div class='product-category'>$fila[7]</div>");
                                     echo ("<div class='product-title'>");
-                                    echo ("<h3><a href='#'>$fila[0]</a></h3>");
+                                    echo ("<h3><a href='shop-single-product.php?id=$fila[2]' id='vista_rapida'>$fila[0]</a></h3>");
                                     echo ("</div>");
                                     echo ("<div class='product-price'><ins>$fila[1]&euro;</ins>");
                                     echo ("</div>");
@@ -113,21 +112,10 @@
                         ?>
                         <!-- fin Solo un elemento -->
                     </div>
-                    <hr>
-                    <!-- Pagination -->
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
-                    </ul>
-                    <!-- end: Pagination -->
                 </div>
             </div>
         </section>
+        <p id="respuesta"></p>
         <!-- end: Shop products -->
         <!-- DELIVERY INFO -->
         <section class="background-grey p-t-40 p-b-0">
@@ -138,8 +126,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-gift"></i></a>
                             </div>
-                            <h3>Free shipping on orders $60+</h3>
-                            <p>Order more than 60$ and you will get free shippining Worldwide. More info.</p>
+                            <h3>Envios gratis a partir de envios 60€</h3>
+                            <p>Haz envios con un importe superior a 60€</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -147,8 +135,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-plane"></i></a>
                             </div>
-                            <h3>Worldwide delivery</h3>
-                            <p>We deliver to the following countries: USA, Canada, Europe, Australia</p>
+                            <h3>Envios a todo el mundo</h3>
+                            <p>Nuestros envios se encuentran disponibles a los siguientes paises: EEUU, Canada, Europa, Australia</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -156,8 +144,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-history"></i></a>
                             </div>
-                            <h3>60 days money back guranty!</h3>
-                            <p>Not happy with our product, feel free to return it, we will refund 100% your money!</p>
+                            <h3>¡60 dias de garantia!</h3>
+                            <p>No estas contento con tu producto, devuelvenoslo gratis y te reembolsaremos el 100% de tu dinero!</p>
                         </div>
                     </div>
                 </div>
@@ -166,71 +154,9 @@
         <!-- end: DELIVERY INFO -->
         <!-- Footer -->
         <footer id="footer">
-            <div class="footer-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <div class="widget">
-                                <div class="widget-title">Polo HTML5 Template</div>
-                                <p class="mb-5">Built with love in Fort Worth, Texas, USA<br>
-                                    All rights reserved. Copyright © 2019. INSPIRO.</p>
-                                <a href="https://themeforest.net/item/polo-responsive-multipurpose-html5-template/13708923" class="btn btn-inverted" target="_blank">Purchase Now</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="widget">
-                                        <div class="widget-title">Discover</div>
-                                        <ul class="list">
-                                            <li><a href="#">Features</a></li>
-                                            <li><a href="#">Layouts</a></li>
-                                            <li><a href="#">Corporate</a></li>
-                                            <li><a href="#">Updates</a></li>
-                                            <li><a href="#">Pricing</a></li>
-                                            <li><a href="#">Customers</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="widget">
-                                        <div class="widget-title">Features</div>
-                                        <ul class="list">
-                                            <li><a href="#">Layouts</a></li>
-                                            <li><a href="#">Headers</a></li>
-                                            <li><a href="#">Widgets</a></li>
-                                            <li><a href="#">Footers</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="widget">
-                                        <div class="widget-title">Pages</div>
-                                        <ul class="list">
-                                            <li><a href="#">Portfolio</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Shop</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="widget">
-                                        <div class="widget-title">Support</div>
-                                        <ul class="list">
-                                            <li><a href="#">Help Desk</a></li>
-                                            <li><a href="#">Documentation</a></li>
-                                            <li><a href="#">Contact Us</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="copyright-content">
                 <div class="container">
-                    <div class="copyright-text text-center">&copy; 2019 POLO - Responsive Multi-Purpose HTML5 Template. All Rights Reserved.<a href="//www.inspiro-media.com" target="_blank" rel="noopener"> INSPIRO</a> </div>
+                    <div class="copyright-text text-center">&copy; 2021 MDLR - Hecho con amor y cariño en Madrid.</div>
                 </div>
             </div>
         </footer>
