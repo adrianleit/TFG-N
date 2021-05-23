@@ -64,9 +64,11 @@
                     <div class="grid-layout grid-4-columns" data-item="grid-item">
                         <!-- Solo un elemento -->
                         <?php
+                        $marca="gucci";
+
                         if ($conexion = mysqli_connect('localhost', 'root', '', 's05bd7e4_streetwear')) {
                             mysqli_set_charset($conexion, 'utf8');
-                            $consulta = "SELECT  * FROM productos;";
+                            $consulta = "SELECT  * FROM productos WHERE marca='$marca';";
                             mysqli_query($conexion, $consulta);
                             if ($resultado = mysqli_query($conexion, $consulta)) {
                                 /* 
@@ -106,8 +108,8 @@
                                     echo ("</div>");
                                     echo ("</div>");
                                 }
+                                mysqli_close($conexion);
                             }
-                            mysqli_close($conexion);
                         }
                         ?>
                         <!-- fin Solo un elemento -->
