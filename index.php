@@ -70,34 +70,34 @@
                                     <li><a href="index.html">Home</a></li>
                                     <li class="dropdown"><a href="./productos_casablanca.php">Casablanca</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="./productos_casablanca_parte.php">Parte de Arriba</a></li>
-                                            <li><a href="./productos_casablanca_parte.php">Parte de Arriba</a></li>
-                                            <li><a href="./productos_casablanca_parte.php">Zapatillas</a></li>
-                                            <li><a href="./productos_casablanca_parte.php">Sudaderas</a></li>
+                                            <li><a href="./productos_casablanca_camisas.php">Camisas</a></li>
+                                            <li><a href="./productos_casablanca_camisetas.php">Camisetas</a></li>
+                                            <li><a href="./productos_casablanca_pantalones.php">Pantalones</a></li>
+                                            <li><a href="./productos_casablanca_sudaderas.php">Sudaderas</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="./productos_gucci.php">Gucci</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="./productos_gucci_parte.php">Parte de Arriba</a></li>
-                                            <li><a href="./productos_gucci_parte.php">Parte de Arriba</a></li>
-                                            <li><a href="./productos_gucci_parte.php">Zapatillas</a></li>
-                                            <li><a href="./productos_gucci_parte.php">Sudaderas</a></li>
+                                            <li><a href="./productos_gucci_camisas.php">Camisas</a></li>
+                                            <li><a href="./productos_gucci_camisetas.php">Camisetas</a></li>
+                                            <li><a href="./productos_gucci_pantalones.php">Pantalones</a></li>
+                                            <li><a href="./productos_gucci_sudaderas.php">Sudaderas</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="./productos_offwhite.php">OFF-WHITE</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="./productos_offwhite_parte.php">Parte de Arriba</a></li>
-                                            <li><a href="./productos_offwhite_parte.php">Parte de Arriba</a></li>
-                                            <li><a href="./productos_offwhite_parte.php">Zapatillas</a></li>
-                                            <li><a href="./productos_offwhite_parte.php">Sudaderas</a></li>
+                                            <li><a href="./productos_offwhite_camisas.php">Camisas</a></li>
+                                            <li><a href="./productos_offwhite_camisetas.php">Camisetas</a></li>
+                                            <li><a href="./productos_offwhite_pantalones.php">Pantalones</a></li>
+                                            <li><a href="./productos_offwhite_sudaderas.php">Sudaderas</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="./productos_stussy.php">STUSSY</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="./productos_stussy_parte.php">Parte de Arriba</a></li>
-                                            <li><a href="./productos_stussy_parte.php">Parte de Arriba</a></li>
-                                            <li><a href="./productos_stussy_parte.php">Zapatillas</a></li>
-                                            <li><a href="./productos_stussy_parte.php">Sudaderas</a></li>
+                                            <li><a href="./productos_stussy_camisas.php">Camisas</a></li>
+                                            <li><a href="./productos_stussy_camisetas.php">Camisetas</a></li>
+                                            <li><a href="./productos_stussy_pantalones.php">Pantalones</a></li>
+                                            <li><a href="./productos_stussy_sudaderas.php">Sudaderas</a></li>
                                         </ul>
                                     </li>
                                 </ul>
