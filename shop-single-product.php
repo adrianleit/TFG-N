@@ -28,7 +28,7 @@
             if ($resultado = mysqli_query($conexion, $consulta)) {
                 /* 
                 [0] => Nombre
-                [1] => Precio
+                s => Precio
                 [2] => Id
                 [3] => Parte
                 [4] => Cantidad
@@ -36,6 +36,15 @@
                 [6] => Comentario
                 [7] => Sexo
                 */
+                /* 
+                                [0] => Marca
+                                [1] => Nombre
+                                [2] => Precio
+                                [3] => Id
+                                [4] => Parte
+                                [5] => Comentario
+                                [6] => Sexo
+                                */
                 while ($fila = mysqli_fetch_row($resultado)) {
         ?>
                     <section id="product-page" class="product-page p-b-0">
@@ -56,11 +65,11 @@
                                     </div>
                                     <div class="col-lg-7">
                                         <div class="product-description">
-                                            <div class="product-category"><?php echo($fila[7]) ?></div>
+                                            <div class="product-category"><?php echo ($fila[6]) ?></div>
                                             <div class="product-title">
-                                                <h3><a href="#"><?php echo($fila[0]) ?></a></h3>
+                                                <h3><a href="#"><?php echo ($fila[1]) ?></a></h3>
                                             </div>
-                                            <div class="product-price"><ins><?php echo($fila[1]) ?>&euro;</ins>
+                                            <div class="product-price"><ins><?php echo ($fila[2]) ?>&euro;</ins>
                                             </div>
                                             <div class="product-reviews"><a href="#">3 customer reviews</a>
                                             </div>
