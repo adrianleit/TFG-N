@@ -13,6 +13,7 @@
     <!-- Stylesheets & Fonts -->
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                 <div class="container">
                     <!--Logo-->
                     <div id="logo">
-                        <a href="index.html">
+                        <a href="index.php">
                             <span class="logo-default">MDLR</span>
                             <span class="logo-dark">MDLR</span>
                         </a>
@@ -67,7 +68,7 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="index.php">Home</a></li>
                                     <li class="dropdown"><a href="./productos_casablanca.php">Casablanca</a>
                                         <ul class="dropdown-menu">
                                             <li><a href="./productos_casablanca_camisas.php">Camisas</a></li>
