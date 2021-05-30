@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="row m-b-20">
                     <div class="col-lg-6 p-t-10 m-b-20">
-                        <h2 class="m-b-20">Sudaderas Casablanca</h2>
+                        <h2 class="m-b-20">Camisas Gucci</h2>
                     </div>
                     <div class="col-lg-3">
                         <div class="order-select">

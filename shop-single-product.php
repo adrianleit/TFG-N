@@ -1,3 +1,8 @@
+<?php session_start();
+if (!isset($_SESSION['carrito'])) {
+    $_SESSION['carrito'] = [];
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,7 +14,7 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
-    <title>POLO | The Multi-Purpose HTML5 Template</title>
+    <title>MDLR | Productos</title>
     <!-- Stylesheets & Fonts -->
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -28,16 +33,6 @@
             mysqli_query($conexion, $consulta);
             if ($resultado = mysqli_query($conexion, $consulta)) {
                 /* 
-                [0] => Nombre
-                s => Precio
-                [2] => Id
-                [3] => Parte
-                [4] => Cantidad
-                [5] => Marca
-                [6] => Comentario
-                [7] => Sexo
-                */
-                /* 
                                 [0] => Marca
                                 [1] => Nombre
                                 [2] => Precio
@@ -47,6 +42,13 @@
                                 [6] => Sexo
                                 */
                 while ($fila = mysqli_fetch_row($resultado)) {
+                    $marca=$fila[0];
+                    $nombre=$fila[1];
+                    $precio=$fila[2];
+                    $id=$fila[3];
+                    $parte=$fila[4];
+                    $comentario=$fila[5];
+                    $sexo =$fila[6];
         ?>
                     <section id="product-page" class="product-page p-b-0">
                         <div class="container">
@@ -56,17 +58,24 @@
                                         <div class="product-image">
                                             <!-- Carousel slider -->
                                             <div class="carousel dots-inside dots-dark arrows-visible" data-items="1" data-loop="true" data-autoplay="true" data-animate-in="fadeIn" data-animate-out="fadeOut" data-autoplay="2500" data-lightbox="gallery">
-                                                <a href="images/shop/products/product-large.jpg" data-lightbox="image" title="Shop product image!"><img alt="Shop product image!" src="images/shop/products/1.jpg">
-                                                </a>
-                                                <a href="images/shop/products/product-large.jpg" data-lightbox="image" title="Shop product image!"><img alt="Shop product image!" src="images/shop/products/2.jpg">
-                                                </a>
+                                                <?php
+                                                for ($i = 1; $i < 3; $i++) {
+                                                    echo ("<a href='./images/productos/" . $fila[3] . "_{$i}'><img alt='Shop product image!' src='./images/productos/" . $fila[3] . "_{$i}'>");
+                                                    echo ("</a>");
+                                                }
+                                                ?>
                                             </div>
                                             <!-- Carousel slider -->
                                         </div>
                                     </div>
                                     <div class="col-lg-7">
                                         <div class="product-description">
-                                            <div class="product-category"><?php echo ($fila[6]) ?></div>
+                                            <div class="product-category">
+                                            <?php
+                                                $mayus= strtoupper($fila[6]);
+                                                echo ($mayus);
+                                            ?>
+                                            </div>
                                             <div class="product-title">
                                                 <h3><a href="#"><?php echo ($fila[1]) ?></a></h3>
                                             </div>
@@ -125,7 +134,20 @@
                                             </div>
                                             <div class="col-lg-6">
                                                 <h6>Añadir al carrito</h6>
-                                                <a class="btn" href="#"><i class="icon-shopping-cart"></i>&nbsp;Añadir al carrito</a>
+                                                <?php
+                                                array_push($_SESSION['carrito'],array($nombre,$precio));
+                                                ?>
+                                                <form action="controlador_carrito.php">
+                                                    <input type="hidden" name="marca" value="<?php echo($marca); ?>">
+                                                    <input type="hidden" name="precio" value="<?php echo($precio); ?>">
+                                                    <input type="hidden" name="id" value="<?php echo($id); ?>">
+                                                    <input type="hidden" name="parte" value="<?php echo($parte); ?>">
+                                                    <input type="hidden" name="comentario" value="<?php echo($comentario); ?>">
+                                                    <input type="hidden" name="sexo" value="<?php echo($sexo); ?>">
+                                                    <button type="submit" class="btn"><i class="icon-shopping-cart"></i>&nbsp;Añadir al carrito</button>
+                                                </form>
+                                                <!-- Mirar como meter las tallas -->
+                                                <!-- <a class="btn" href="#"><i class="icon-shopping-cart"></i>&nbsp;Añadir al carrito</a> -->
                                             </div>
                                         </div>
                                     </div>

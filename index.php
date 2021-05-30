@@ -206,7 +206,7 @@
                     <?php
                     if ($conexion = mysqli_connect('localhost', 'root', '', 's05bd7e4_streetwear')) {
                         mysqli_set_charset($conexion, 'utf8');
-                        $consulta = "SELECT nombre, id FROM productos LIMIT 8 ;";
+                        $consulta = "SELECT nombre, id FROM productos ORDER BY RAND() LIMIT 8";
                         mysqli_query($conexion, $consulta);
                         if ($resultado = mysqli_query($conexion, $consulta)) {
                             while ($fila = mysqli_fetch_row($resultado)) {
@@ -215,7 +215,7 @@
                                 echo ("<div class='portfolio-slider'>");
                                 echo ("<div class='carousel dots-inside dots-dark arrows-dark' data-items='1' data-loop='true' data-autoplay='true' data-animate-in='fadeIn' data-animate-out='fadeOut' data-autoplay='1500'>");
                                 for ($i = 1; $i < 3; $i++) {
-                                    echo ("<a href='#'><img src='images/portfolio/" . $fila['id'] . "_" . $i . ".jpg' alt=''></a>");
+                                    echo ("<a href='shop-single-product.php?id=$fila[1]'><img alt='Shop product image!' src='./images/productos/".$fila[1]."_{$i}'>");
                                 }
                                 echo ("</div>");
                                 echo ("</div>");
