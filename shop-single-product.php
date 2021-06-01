@@ -1,8 +1,3 @@
-<?php session_start();
-if (!isset($_SESSION['carrito'])) {
-    $_SESSION['carrito'] = [];
-}
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -42,13 +37,13 @@ if (!isset($_SESSION['carrito'])) {
                                 [6] => Sexo
                                 */
                 while ($fila = mysqli_fetch_row($resultado)) {
-                    $marca=$fila[0];
-                    $nombre=$fila[1];
-                    $precio=$fila[2];
-                    $id=$fila[3];
-                    $parte=$fila[4];
-                    $comentario=$fila[5];
-                    $sexo =$fila[6];
+                    $marca = $fila[0];
+                    $nombre = $fila[1];
+                    $precio = $fila[2];
+                    $id = $fila[3];
+                    $parte = $fila[4];
+                    $comentario = $fila[5];
+                    $sexo = $fila[6];
         ?>
                     <section id="product-page" class="product-page p-b-0">
                         <div class="container">
@@ -71,10 +66,10 @@ if (!isset($_SESSION['carrito'])) {
                                     <div class="col-lg-7">
                                         <div class="product-description">
                                             <div class="product-category">
-                                            <?php
-                                                $mayus= strtoupper($fila[6]);
+                                                <?php
+                                                $mayus = strtoupper($fila[6]);
                                                 echo ($mayus);
-                                            ?>
+                                                ?>
                                             </div>
                                             <div class="product-title">
                                                 <h3><a href="#"><?php echo ($fila[1]) ?></a></h3>
@@ -91,65 +86,63 @@ if (!isset($_SESSION['carrito'])) {
                                                 going through the cites of the word in</p>
                                             <div class="seperator m-t-20 m-b-10"></div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <h6>Selecciona la talla</h6>
-                                                <ul class="product-size">
-                                                    <li>
-                                                        <label>
-                                                            <input type="radio" checked="checked" value="option1" name="product-size"><span>XS</span>
-                                                        </label>
-                                                    </li>
-                                                    <li>
-                                                        <label>
-                                                            <input type="radio" checked="checked" value="option1" name="product-size"><span>S</span>
-                                                        </label>
-                                                    </li>
-                                                    <li>
-                                                        <label>
-                                                            <input type="radio" checked="checked" value="option1" name="product-size"><span>M</span>
-                                                        </label>
-                                                    </li>
-                                                    <li>
-                                                        <label>
-                                                            <input type="radio" checked="checked" value="option1" name="product-size"><span>L</span>
-                                                        </label>
-                                                    </li>
-                                                    <li>
-                                                        <label>
-                                                            <input type="radio" checked="checked" value="option1" name="product-size"><span>XL</span>
-                                                        </label>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <h6>Selecciona la cantidad</h6>
-                                                <div class="cart-product-quantity">
-                                                    <div class="quantity m-l-5">
-                                                        <input type="button" class="minus" value="-">
-                                                        <input type="text" class="qty" value="1">
-                                                        <input type="button" class="plus" value="+">
+                                        <form action="controlador_carrito.php" method="POST">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <h6>Selecciona la talla</h6>
+                                                    <ul class="product-size">
+                                                        <li>
+                                                            <label>
+                                                                <input type="radio" value="option1" name="size"><span>XS</span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <input type="radio" value="option1" name="size"><span>S</span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <input type="radio" value="option1" name="size"><span>M</span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <input type="radio" value="option1" name="size"><span>L</span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <input type="radio" value="option1" name="size"><span>XL</span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <h6>Selecciona la cantidad</h6>
+                                                    <div class="cart-product-quantity">
+                                                        <div class="quantity m-l-5">
+                                                            <input type="button" class="minus" onclick="menos();" value="-">
+                                                            <input type="text" class="qty" name="cantidad" id="cantidad" value="1">
+                                                            <input type="button" class="plus" onclick="sumar();" value="+">
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-lg-6">
+                                                    <h6>Añadir al carrito</h6>
+                                                    <input type="hidden" id="marca" name="marca" value="<?php echo ($marca); ?>">
+                                                    <input type="hidden" id="precio" name="precio" value="<?php echo ($precio); ?>">
+                                                    <input type="hidden" id="id" name="id" value="<?php echo ($id); ?>">
+                                                    <input type="hidden" id="parte" name="parte" value="<?php echo ($parte); ?>">
+                                                    <input type="hidden" id="comentario" name="comentario" value="<?php echo ($comentario); ?>">
+                                                    <input type="hidden" id="sexo" name="sexo" value="<?php echo ($sexo); ?>">
+                                                    <button type="submit" class="btn" id="añadir"><i class="icon-shopping-cart"></i>&nbsp;Añadir al carrito</button>
+
+                                                    <!-- Mirar como meter las tallas -->
+                                                    <!-- <a class="btn" href="#"><i class="icon-shopping-cart"></i>&nbsp;Añadir al carrito</a> -->
+                                                </div>
                                             </div>
-                                            <div class="col-lg-6">
-                                                <h6>Añadir al carrito</h6>
-                                                <?php
-                                                array_push($_SESSION['carrito'],array($nombre,$precio));
-                                                ?>
-                                                <form action="controlador_carrito.php">
-                                                    <input type="hidden" name="marca" value="<?php echo($marca); ?>">
-                                                    <input type="hidden" name="precio" value="<?php echo($precio); ?>">
-                                                    <input type="hidden" name="id" value="<?php echo($id); ?>">
-                                                    <input type="hidden" name="parte" value="<?php echo($parte); ?>">
-                                                    <input type="hidden" name="comentario" value="<?php echo($comentario); ?>">
-                                                    <input type="hidden" name="sexo" value="<?php echo($sexo); ?>">
-                                                    <button type="submit" class="btn"><i class="icon-shopping-cart"></i>&nbsp;Añadir al carrito</button>
-                                                </form>
-                                                <!-- Mirar como meter las tallas -->
-                                                <!-- <a class="btn" href="#"><i class="icon-shopping-cart"></i>&nbsp;Añadir al carrito</a> -->
-                                            </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                                 <!-- Product additional tabs -->
@@ -356,6 +349,17 @@ if (!isset($_SESSION['carrito'])) {
     <script src="js/plugins.js"></script>
     <!--Template functions-->
     <script src="js/functions.js"></script>
+    <script>
+        function sumar() {
+            $('#cantidad').val(Number($('#cantidad').val()) + 1).change();
+        }
+
+        function menos() {
+            if (document.getElementById('cantidad').value > 0) {
+                $('#cantidad').val(Number($('#cantidad').val()) - 1).change();
+            }
+        }
+    </script>
 </body>
 
 </html>
