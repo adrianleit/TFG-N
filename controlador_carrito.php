@@ -22,6 +22,9 @@ if (isset($_POST['cantidad']) && isset($_POST['id']) && isset($_POST['size']) &&
     // $_SESSION['carrito'][1] => Talla
     // $_SESSION['carrito'][2] => Cantidad
     // $_SESSION['carrito'][3] => Precio (solo una unidad)
+    // $_SESSION['carrito'][4] => Marca
+    // $_SESSION['carrito'][5] => Parte de Ropa
+    // $_SESSION['carrito'][6] => Sexo
 
     /** @var bool $existe Determina si un producto esta en el carrito */
     $existe=false;
@@ -47,12 +50,8 @@ if (isset($_POST['cantidad']) && isset($_POST['id']) && isset($_POST['size']) &&
         if($existe==false){
             array_push($_SESSION['carrito'], array($id, $talla, $cantidad, $precio, $marca, $parte, $sexo));
         }
+        header("location:shop-cart.php"); 
     }
 } else{
     echo("Faltan variables");
 }
-//Para mostrar todo el carrito
-echo("<pre>");
-    print_r($_SESSION['carrito']);
-echo("</pre>");
-?>
