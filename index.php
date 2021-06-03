@@ -215,7 +215,7 @@
                                 echo ("<div class='portfolio-slider'>");
                                 echo ("<div class='carousel dots-inside dots-dark arrows-dark' data-items='1' data-loop='true' data-autoplay='true' data-animate-in='fadeIn' data-animate-out='fadeOut' data-autoplay='1500'>");
                                 for ($i = 1; $i < 3; $i++) {
-                                    echo ("<a href='shop-single-product.php?id=$fila[1]'><img alt='Shop product image!' src='./images/productos/".$fila[1]."_{$i}'>");
+                                    echo ("<a href='shop-single-product.php?id=$fila[1]'><img alt='Shop product image!' src='./images/productos/" . $fila[1] . "_{$i}'>");
                                 }
                                 echo ("</div>");
                                 echo ("</div>");
@@ -239,47 +239,33 @@
                     <h2>NUESTRAS MARCAS</h2>
                     <span class="lead">Our awesome clients we've had the pleasure to work with! </span>
                 </div>
-                <div class="carousel client-logos" data-items="6" data-items-sm="4" data-items-xs="3" data-items-xxs="2" data-margin="20" data-arrows="false" data-autoplay="true" data-autoplay="3000" data-loop="true">
+                <div class="carousel client-logos" data-items="6" data-items-sm="4" data-items-xs="3" data-items-xxs="2" data-margin="20" data-arrows="false" data-autoplay="false" data-autoplay="3000" data-loop="false">
                     <div>
-                        <a href="#"><img alt="" src="images/clients/1.png"> </a>
+                        <a href="#"><img alt="" src="images/clients/casablanca.jpg"></a>
                     </div>
                     <div>
-                        <a href="#"><img alt="" src="images/clients/2.png"> </a>
+                        <a href="#"><img alt="" src="images/clients/gucci.jpg"> </a>
                     </div>
                     <div>
-                        <a href="#"><img alt="" src="images/clients/3.png"> </a>
+                        <a href="#"><img alt="" src="images/clients/off-white.jpg"> </a>
                     </div>
                     <div>
-                        <a href="#"><img alt="" src="images/clients/4.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="images/clients/5.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="images/clients/6.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="images/clients/7.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="images/clients/8.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="images/clients/9.png"> </a>
+                        <a href="#"><img alt="" src="images/clients/stussy.jpg"> </a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- end: CLIENTS -->
-        <!-- Footer -->
-        <br>
-        <div class="copyright-content">
-            <div class="container">
-                <div class="copyright-text text-center">&copy; 2021 MDLR - Hecho con amor y cariño en Madrid.</div>
-            </div>
+    </div>
+    <!-- end: CLIENTS -->
+    <!-- Footer -->
+    <br>
+    <div class="copyright-content">
+        <div class="container">
+            <div class="copyright-text text-center">&copy; 2021 MDLR - Hecho con amor y cariño en Madrid.</div>
         </div>
-        </footer>
-        <!-- end: Footer -->
+    </div>
+    </footer>
+    <!-- end: Footer -->
     </div>
     <!-- end: Body Inner -->
     <!-- Scroll top -->
