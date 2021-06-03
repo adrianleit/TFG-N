@@ -1,45 +1,58 @@
 <?php
+/** @author Adrian Delgado y Alejandro García 
+ * @version 2021.06 Carrito MDLR
+*/
+
 //Se inicia la sesion
 session_start();
-if(!isset($_POST['cantidad'])){
-    echo("Falta la cantidad");
-}
-if(!isset($_POST['id'])){
-    echo("Falta el id");
-}
-if(!isset($_POST['size'])){
-    echo("Falta la talla");
-}
-if(!isset($_POST['precio'])){
-    echo("Falta el precio");
-}
 
 // Sacar los valores del producto que vamos a añadir en la base de datos
-if (isset($_POST['cantidad']) && isset($_POST['id']) && isset($_POST['size']) && isset($_POST['precio'])) {
-    $cantidad = intval($_POST['cantidad']);
+if (isset($_POST['cantidad']) && isset($_POST['id']) && isset($_POST['size']) && isset($_POST['precio']) 
+&& isset($_POST['marca']) && isset($_POST['parte']) && isset($_POST['sexo'])) {
     $id = $_POST['id'];
     $talla = $_POST['size'];
+    $cantidad = intval($_POST['cantidad']);
     $precio = $_POST['precio'];
+    $marca =$_POST['marca'];
+    $parte =$_POST['parte'];
+    $sexo =$_POST['sexo'];
+    $existe="N";
 
-    //Si no existe la variable de sesion carrito la creamos y le metemos el producto
-    if (isset($_SESSION['carrito'])) {
-         // Comprobar si esta ya el elemento el carrito
-         for ($i = 0; $i > count($_SESSION['carrito']); $i++) {
-            if ($_SESSION['carrito'][0] == $id && $_SESSION['carrito'][3] == $talla) {
-                $_SESSION['carrito'][1] = intval($_SESSION['carrito'][1]) + intval($cantidad);
-                echo ('Coincide');
-            } else {
-                array_push($_SESSION['carrito'], array($id, $cantidad, $precio, $talla));
-                echo ('Lo mete pero no coincide');
-            }
+    // $_SESSION['carrito'][0] => Id
+    // $_SESSION['carrito'][1] => Talla
+    // $_SESSION['carrito'][2] => Cantidad
+    // $_SESSION['carrito'][3] => Precio (solo una unidad)
+
+    /** @var bool $existe Determina si un producto esta en el carrito */
+    $existe=false;
+    /* Si no existe la variable de sesion carrito, se crea como un array y ademas se le mete el 
+    producto directamente*/
+    if(!isset($_SESSION['carrito'])){
+        $_SESSION['carrito']=array();
+        array_push($_SESSION['carrito'], array($id, $talla, $cantidad, $precio, $marca, $parte, $sexo));
+    } else{
+    /*Si la variable de sesion existe, se recorre con un bucle en busca de conincidencias con el id 
+    del producto ($_SESSION['carrito'][0]) y la talla del producto($_SESSION['carrito'][1]) */
+        for($i=0;$i<count($_SESSION['carrito']);$i++){
+            if ($id == $_SESSION['carrito'][$i][0] && $talla == $_SESSION['carrito'][$i][1]) {
+                /* Si encuentra una coincidencia con el id y la talla pone $existe en "true" 
+                para no añadir posteriormente el producto de nuevo, además coge cantidad que
+                se trae de la otra página y se lo suma a lo que ya había en el carrito */
+                $existe=true;
+                $_SESSION['carrito'][$i][2]= $_SESSION['carrito'][$i][2] + $cantidad;
+            }              
         }
-    } else {
-        $_SESSION['carrito'] = [];
-        array_push($_SESSION['carrito'], array($id, $cantidad, $precio, $talla));
-        echo ('Crea el carrito');
-        //header('Location: shop-single-product.php');
+        /* Si no ha encontrado ninguna coincidencia en todo el carrito, $existe será igual a false por lo 
+        que se añadira el producto entero al carritos */
+        if($existe==false){
+            array_push($_SESSION['carrito'], array($id, $talla, $cantidad, $precio, $marca, $parte, $sexo));
+        }
     }
 } else{
     echo("Faltan variables");
 }
+//Para mostrar todo el carrito
+echo("<pre>");
+    print_r($_SESSION['carrito']);
+echo("</pre>");
 ?>

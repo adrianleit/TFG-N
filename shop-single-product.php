@@ -93,27 +93,27 @@
                                                     <ul class="product-size">
                                                         <li>
                                                             <label>
-                                                                <input type="radio" value="option1" name="size"><span>XS</span>
+                                                                <input type="radio" value="XS" name="size"><span>XS</span>
                                                             </label>
                                                         </li>
                                                         <li>
                                                             <label>
-                                                                <input type="radio" value="option1" name="size"><span>S</span>
+                                                                <input type="radio" value="S" name="size"><span>S</span>
                                                             </label>
                                                         </li>
                                                         <li>
                                                             <label>
-                                                                <input type="radio" value="option1" name="size"><span>M</span>
+                                                                <input type="radio" value="M" name="size"><span>M</span>
                                                             </label>
                                                         </li>
                                                         <li>
                                                             <label>
-                                                                <input type="radio" value="option1" name="size"><span>L</span>
+                                                                <input type="radio" value="L" name="size"><span>L</span>
                                                             </label>
                                                         </li>
                                                         <li>
                                                             <label>
-                                                                <input type="radio" value="option1" name="size"><span>XL</span>
+                                                                <input type="radio" value="XL" name="size"><span>XL</span>
                                                             </label>
                                                         </li>
                                                     </ul>
