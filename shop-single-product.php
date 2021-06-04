@@ -35,6 +35,7 @@
                                 [4] => Parte
                                 [5] => Comentario
                                 [6] => Sexo
+                                [7] => Descripcion
                                 */
                 while ($fila = mysqli_fetch_row($resultado)) {
                     $marca = $fila[0];
@@ -44,6 +45,7 @@
                     $parte = $fila[4];
                     $comentario = $fila[5];
                     $sexo = $fila[6];
+                    $descripcion = $fila[7];
         ?>
                     <section id="product-page" class="product-page p-b-0">
                         <div class="container">
@@ -79,11 +81,7 @@
                                             <div class="product-reviews"><a href="#">3 customer reviews</a>
                                             </div>
                                             <div class="seperator m-b-10"></div>
-                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                                                piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                                                Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
-                                                up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-                                                going through the cites of the word in</p>
+                                            <?php echo("<p>$fila[7]</p>") ?>
                                             <div class="seperator m-t-20 m-b-10"></div>
                                         </div>
                                         <form action="controlador_carrito.php" method="POST">
@@ -136,6 +134,7 @@
                                                     <input type="hidden" id="parte" name="parte" value="<?php echo ($parte); ?>">
                                                     <input type="hidden" id="comentario" name="comentario" value="<?php echo ($comentario); ?>">
                                                     <input type="hidden" id="sexo" name="sexo" value="<?php echo ($sexo); ?>">
+                                                    <input type="hidden" id="nombre" name="nombre" value="<?php echo ($nombre); ?>">
                                                     <button type="submit" class="btn" id="añadir"><i class="icon-shopping-cart"></i>&nbsp;Añadir al carrito</button>
 
                                                     <!-- Mirar como meter las tallas -->

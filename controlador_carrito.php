@@ -8,7 +8,7 @@ session_start();
 
 // Sacar los valores del producto que vamos a añadir en la base de datos
 if (isset($_POST['cantidad']) && isset($_POST['id']) && isset($_POST['size']) && isset($_POST['precio']) 
-&& isset($_POST['marca']) && isset($_POST['parte']) && isset($_POST['sexo'])) {
+&& isset($_POST['marca']) && isset($_POST['parte']) && isset($_POST['sexo']) && $nombre =$_POST['nombre']) {
     $id = $_POST['id'];
     $talla = $_POST['size'];
     $cantidad = intval($_POST['cantidad']);
@@ -16,6 +16,7 @@ if (isset($_POST['cantidad']) && isset($_POST['id']) && isset($_POST['size']) &&
     $marca =$_POST['marca'];
     $parte =$_POST['parte'];
     $sexo =$_POST['sexo'];
+    $nombre =$_POST['nombre'];
     $existe="N";
 
     // $_SESSION['carrito'][0] => Id
@@ -25,6 +26,7 @@ if (isset($_POST['cantidad']) && isset($_POST['id']) && isset($_POST['size']) &&
     // $_SESSION['carrito'][4] => Marca
     // $_SESSION['carrito'][5] => Parte de Ropa
     // $_SESSION['carrito'][6] => Sexo
+    // $_SESSION['carrito'][7] => Nombre
 
     /** @var bool $existe Determina si un producto esta en el carrito */
     $existe=false;
@@ -32,7 +34,7 @@ if (isset($_POST['cantidad']) && isset($_POST['id']) && isset($_POST['size']) &&
     producto directamente*/
     if(!isset($_SESSION['carrito'])){
         $_SESSION['carrito']=array();
-        array_push($_SESSION['carrito'], array($id, $talla, $cantidad, $precio, $marca, $parte, $sexo));
+        array_push($_SESSION['carrito'], array($id, $talla, $cantidad, $precio, $marca, $parte, $sexo, $nombre));
     } else{
     /*Si la variable de sesion existe, se recorre con un bucle en busca de conincidencias con el id 
     del producto ($_SESSION['carrito'][0]) y la talla del producto($_SESSION['carrito'][1]) */
@@ -48,7 +50,7 @@ if (isset($_POST['cantidad']) && isset($_POST['id']) && isset($_POST['size']) &&
         /* Si no ha encontrado ninguna coincidencia en todo el carrito, $existe será igual a false por lo 
         que se añadira el producto entero al carritos */
         if($existe==false){
-            array_push($_SESSION['carrito'], array($id, $talla, $cantidad, $precio, $marca, $parte, $sexo));
+            array_push($_SESSION['carrito'], array($id, $talla, $cantidad, $precio, $marca, $parte, $sexo, $nombre));
         }
         header("location:shop-cart.php"); 
     }

@@ -20,6 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `s05bd7e4_streetwear`
 --
+DROP DATABASE IF EXISTS `s05bd7e4_streetwear`;
 CREATE DATABASE IF NOT EXISTS `s05bd7e4_streetwear` DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci;
 USE `s05bd7e4_streetwear`;
 
@@ -66,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `productos` (
   `id` varchar(15) COLLATE latin1_spanish_ci NOT NULL,
   `parte` varchar(50) COLLATE latin1_spanish_ci NOT NULL,
   `comentario` varchar(140) COLLATE latin1_spanish_ci DEFAULT NULL,
-  `sexo`,`descripcion` varchar(50) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `sexo` varchar(50) COLLATE latin1_spanish_ci DEFAULT NULL,
   `descripcion` varchar(5000) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `comentario` (`comentario`)

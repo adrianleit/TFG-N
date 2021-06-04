@@ -58,6 +58,7 @@
                                     echo ("<div class='product-image'>");
                                     for ($i=1; $i < 3; $i++) { 
                                         echo ("<a href='shop-single-product.php?id=$fila[3]'><img alt='Shop product image!' src='./images/productos/".$fila[3]."_{$i}'>");
+                                        echo ("<a href='shop-single-product.php?id=$fila[3]'><img alt='Shop product image!' src='./images/productos/".$fila[3]."_{$i}'>");
                                         echo ("</a>");
                                     }
                                     echo ("<span class='product-wishlist'>");
