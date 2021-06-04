@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="row m-b-20">
                     <div class="col-lg-6 p-t-10 m-b-20">
-                        <h2 class="m-b-20">Camsisetas Casablanca</h2>
+                        <h2 class="m-b-20">Camisetas Casablanca</h2>
                     </div>
                 </div>
                 <!--Product list-->
@@ -39,7 +39,7 @@
                         $parte="camisetas";
                         if ($conexion = mysqli_connect('localhost', 'root', '', 's05bd7e4_streetwear')) {
                             mysqli_set_charset($conexion, 'utf8');
-                            $consulta = "SELECT  * FROM productos WHERE marca='casablanca' AND parte='camisetas';";
+                            $consulta = "SELECT  * FROM productos WHERE marca='$marca' AND parte='$parte';";
                             mysqli_query($conexion, $consulta);
                             if ($resultado = mysqli_query($conexion, $consulta)) {
                                 /* 

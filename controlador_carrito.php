@@ -35,6 +35,7 @@ if (isset($_POST['cantidad']) && isset($_POST['id']) && isset($_POST['size']) &&
     if(!isset($_SESSION['carrito'])){
         $_SESSION['carrito']=array();
         array_push($_SESSION['carrito'], array($id, $talla, $cantidad, $precio, $marca, $parte, $sexo, $nombre));
+        header("location:shop-cart.php"); 
     } else{
     /*Si la variable de sesion existe, se recorre con un bucle en busca de conincidencias con el id 
     del producto ($_SESSION['carrito'][0]) y la talla del producto($_SESSION['carrito'][1]) */

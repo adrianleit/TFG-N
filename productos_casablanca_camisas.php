@@ -28,15 +28,15 @@
                 <div class="row m-b-20">
                     <div class="col-lg-6 p-t-10 m-b-20">
                         <h2 class="m-b-20">Camisas Casablanca</h2>
-                    </div>  
+                    </div>
                 </div>
                 <!--Product list-->
                 <div class="shop">
                     <div class="grid-layout grid-4-columns" data-item="grid-item">
                         <!-- Solo un elemento -->
                         <?php
-                        $marca = "casablanca";
-                        $parte = "camisas";
+                        $marca="casablanca";
+                        $parte="camisas";
                         if ($conexion = mysqli_connect('localhost', 'root', '', 's05bd7e4_streetwear')) {
                             mysqli_set_charset($conexion, 'utf8');
                             $consulta = "SELECT  * FROM productos WHERE marca='$marca' AND parte='$parte';";
@@ -57,7 +57,6 @@
                                     echo ("<div class='product'>");
                                     echo ("<div class='product-image'>");
                                     for ($i=1; $i < 3; $i++) { 
-                                        echo ("<a href='shop-single-product.php?id=$fila[3]'><img alt='Shop product image!' src='./images/productos/".$fila[3]."_{$i}'>");
                                         echo ("<a href='shop-single-product.php?id=$fila[3]'><img alt='Shop product image!' src='./images/productos/".$fila[3]."_{$i}'>");
                                         echo ("</a>");
                                     }
@@ -90,7 +89,6 @@
         </section>
         <p id="respuesta"></p>
         <!-- end: Shop products -->
-        <img src="./images/productos/".$fila[0]." alt="">
         <!-- DELIVERY INFO -->
         <section class="background-grey p-t-40 p-b-0">
             <div class="container">

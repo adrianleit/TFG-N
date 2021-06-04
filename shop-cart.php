@@ -48,35 +48,25 @@ session_start();
                                 <!-- EACH PRODUCT -->
                                 <tbody>
                                     <?php
-                                    // $_SESSION['carrito'][0] => Id
-                                    // $_SESSION['carrito'][1] => Talla
-                                    // $_SESSION['carrito'][2] => Cantidad
-                                    // $_SESSION['carrito'][3] => Precio (solo una unidad)
-                                    // $_SESSION['carrito'][4] => Marca
-                                    // $_SESSION['carrito'][5] => Parte de Ropa
-                                    // $_SESSION['carrito'][6] => Sexo
-                                    // $_SESSION['carrito'][7] => Nombre
-
-                                    // $_SESSION['carrito'][0] => Id
-                                    // $_SESSION['carrito'][1] => Talla
-                                    // $_SESSION['carrito'][2] => Cantidad
-                                    // $_SESSION['carrito'][3] => Precio (solo una unidad)
-                                    // $_SESSION['carrito'][4] => Marca
-                                    // $_SESSION['carrito'][5] => Parte de Ropa
-                                    // $_SESSION['carrito'][6] => Sexo
-                                    // $_SESSION['carrito'][7] => Nombre
+                                    // $_SESSION['carrito'][][0] => Id
+                                    // $_SESSION['carrito'][][1] => Talla
+                                    // $_SESSION['carrito'][][2] => Cantidad
+                                    // $_SESSION['carrito'][][3] => Precio (solo una unidad)
+                                    // $_SESSION['carrito'][][4] => Marca
+                                    // $_SESSION['carrito'][][5] => Parte de Ropa
+                                    // $_SESSION['carrito'][][6] => Sexo
+                                    // $_SESSION['carrito'][][7] => Nombre
 
                                     for ($i = 0; $i < count($_SESSION['carrito']); $i++) {
                                         // $producto=explode(",",$_SESSION['carrito']);
-                                        $foto = $_SESSION['carrito'][$i][0];
                                     ?>
                                         <tr>
                                             <td class="cart-product-remove">
                                                 <a href="#"><i class="fa fa-times"></i></a>
                                             </td>
                                             <td class="cart-product-thumbnail">
-                                                <a href="#">
-                                                    <?php echo ("<img src='images/shop/productos/{$foto}.jpg' alt='FOTO'"); ?>
+                                                <?php echo ("<a href='shop-single-product.php?id=" . $_SESSION['carrito'][$i][0] . "'>");
+                                                echo ("<img src='./images/productos/" . $_SESSION['carrito'][$i][0] . "_1'.jpg' alt='FOTO'"); ?>
                                                 </a>
                                                 <div class="cart-product-thumbnail-name"><?php echo ($_SESSION['carrito'][$i][7]) ?></div>
                                             </td>
@@ -91,9 +81,9 @@ session_start();
                                             </td>
                                             <td class="cart-product-quantity">
                                                 <div class="quantity">
-                                                    <input type="button" class="minus" value="-">
-                                                    <input type="text" class="qty" value="1" name="quantity">
-                                                    <input type="button" class="plus" value="+">
+                                                    <input type="text" class="qty" value="<?php echo ($_SESSION['carrito'][$i][2]) ?>" name="quantity">
+                                                    <input type="button" class="minus" onclick="menos();" value="-">
+                                                    <input type="button" class="plus" onclick="sumar();" value="+">
                                                 </div>
                                             </td>
                                             <td class="cart-product-subtotal">
@@ -108,7 +98,8 @@ session_start();
                     </div>
                     <div class="row">
                         <div class="col-lg-12 text-right">
-                            <button type="button" class="btn">Update Card</button>
+                            <!-- Tiene un evento en cantidad.js -->
+                            <button type="button" class="btn" id="update_cart">Update Card</button>
                         </div>
                     </div>
                     <div class="row">
@@ -291,6 +282,7 @@ session_start();
     <script src="js/plugins.js"></script>
     <!--Template functions-->
     <script src="js/functions.js"></script>
+    <script src="js/cantidad.js"></script>
 </body>
 
 </html>

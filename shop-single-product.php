@@ -348,17 +348,7 @@
     <script src="js/plugins.js"></script>
     <!--Template functions-->
     <script src="js/functions.js"></script>
-    <script>
-        function sumar() {
-            $('#cantidad').val(Number($('#cantidad').val()) + 1).change();
-        }
-
-        function menos() {
-            if (document.getElementById('cantidad').value > 0) {
-                $('#cantidad').val(Number($('#cantidad').val()) - 1).change();
-            }
-        }
-    </script>
+    <script src="js/cantidad.js"></script>
 </body>
 
 </html>
