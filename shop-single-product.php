@@ -1,3 +1,8 @@
+<?php
+/** @author Adrian Delgado y Alejandro García 
+ * @version 2021.06 MDLR
+*/
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -349,6 +354,10 @@
     <!--Template functions-->
     <script src="js/functions.js"></script>
     <script src="js/cantidad.js"></script>
+    <!-- Ajax comentarios -->
+    <script>
+    
+    </script>
 </body>
 
 </html>

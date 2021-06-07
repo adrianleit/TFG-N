@@ -1,25 +1,22 @@
 <?php
-$marca = "casablanca";
-$parte = "camisa";
-if ($conexion = mysqli_connect('localhost', 'root', '', 's05bd7e4_streetwear')) {
-    mysqli_set_charset($conexion, 'utf8');
-    $consulta = "SELECT * FROM productos WHERE marca='casablanca' AND parte='camisetas';";
-    mysqli_query($conexion, $consulta);
-    if ($resultado = mysqli_query($conexion, $consulta)) {
-        /* 
-        [0] => Marca
-        [1] => Nombre
-        [2] => Precio
-        [3] => Id
-        [4] => Parte
-        [5] => Comentario
-        [6] => Sexo
-        */
-        $fila=mysqli_fetch_row($resultado);
-        echo ("Hola");
-        echo ("<pre>");
-        print_r($fila);
-        echo ("</pre>");
-        mysqli_close($conexion);
+$id="p4";
+$talla="m";
+$productos=array(array("p1","m"), array("p2","s"), array("p3","xs"), array("p4","m"), array("p5","l"), array("p6","y"));
+echo("<pre>");
+    print_r($productos);
+echo("</pre>");
+    if (isset($productos)) {
+        //Recorremos la variable de sesion
+        /*Si la variable de sesion existe, se recorre con un bucle en busca de conincidencias con el id 
+        del producto ($productos[0]) y la talla del producto($productos[1]) */
+        for ($i = 0; $i < count($productos); $i++) {
+            if ($id == $productos[$i][0] && $talla == $productos[$i][1]) {
+                unset($productos[$i]);
+                sort($productos);
+            }
+        }
     }
-}
+
+echo("<pre>");
+    print_r($productos);
+echo("</pre>");

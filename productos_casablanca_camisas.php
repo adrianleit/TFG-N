@@ -98,7 +98,7 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-gift"></i></a>
                             </div>
-                            <h3>Envios gratis a partir de envios 60€</h3>
+                            <h3>Envios gratuitos a partir de envios 60€</h3>
                             <p>Haz envios con un importe superior a 60€</p>
                         </div>
                     </div>

@@ -48,7 +48,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a id="btn-search" href="#"> <i class="icon-search"></i></a>
+                                <a href="login.php"> <i class="icon-user"></i></a>
                             </li>
                             <li>
                                 <div class="p-dropdown">
@@ -106,6 +106,7 @@
                                             <li><a href="./productos_stussy_sudaderas.php">Sudaderas</a></li>
                                         </ul>
                                     </li>
+                                    <li><a href="page-about-basic.php">Sobre Nosotros</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -118,27 +119,26 @@
         <!-- Slider Video-->
         <div id="slider" class="inspiro-slider slider-fullscreen dots-creative" data-fade="true">
             <!-- Slide 1 -->
-            <div class="slide kenburns" data-bg-image="images/slider/notgeneric_bg3.jpg">
+            <div class="slide" data-bg-video="images/clients/Virgil-Abloh-of-Off–White-Talks_recorte.mp4">
                 <div class="bg-overlay"></div>
                 <div class="container">
-                    <div class="slide-captions text-center text-light">
+                    <div class="slide-captions text-left text-light">
                         <!-- Captions -->
-                        <h1>Bienvenidos a MDLR</h1>
-                        <p> </p>
-                        <div><a href="#welcome" class="btn scroll-to">Explore more</a></div>
+                        <h1>Ropa StreetWear de las mejores marcas</h1>
+                        <p class="text-small">En MDLR encontrarás una selección de las mejores marcas.</p>
                         <!-- end: Captions -->
                     </div>
                 </div>
             </div>
             <!-- end: Slide 1 -->
             <!-- Slide 2 -->
-            <div class="slide" data-bg-video="video/pexels-waves.mp4">
+            <div class="slide" data-bg-video="images/clients/Stüssy-Dr. Martens_recorte.mp4">
                 <div class="bg-overlay"></div>
                 <div class="container">
-                    <div class="slide-captions text-left text-light">
+                    <div class="slide-captions text-center text-light">
                         <!-- Captions -->
-                        <h1>Ropa StreetWear de las mejores marcas</h1>
-                        <p class="text-small">En MDLR podras comprar y comentar sobre tus prendas favoritas.</p>
+                        <h1>Stussy</h1>
+                        <p class="text-small">Long live Stussy!</p>
                         <!-- end: Captions -->
                     </div>
                 </div>
@@ -150,14 +150,14 @@
         <section class="background-grey">
             <div class="container">
                 <div class="heading-text heading-section">
-                    <h2>En que consiste MDLR </h2>
-                    <span class="lead">Create amam ipsum dolor sit amet, Beautiful nature, and rare feathers!.</span>
+                    <h2>Para ti</h2>
+                    <span class="lead">En MDLR, lo primordial es la satisfacción del cliente</span>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <div data-animate="fadeInUp" data-animate-delay="0">
-                            <h4>Modern Design</h4>
-                            <p>Lorem ipsum dolor sit amet, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam.</p>
+                            <h4>Multiplataforma</h4>
+                            <p>En MDLR podras realizar todas tus compras desde cualquier plataforma, ya sea tu ordenador, tablet o teléfono móvil.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -172,24 +172,6 @@
                             <p>Lorem ipsum dolor sit amet, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div data-animate="fadeInUp" data-animate-delay="600">
-                            <h4>100% Responsive Layout</h4>
-                            <p>Lorem ipsum dolor sit amet, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div data-animate="fadeInUp" data-animate-delay="800">
-                            <h4>Clean Modern Code</h4>
-                            <p>Lorem ipsum dolor sit amet, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div data-animate="fadeInUp" data-animate-delay="1000">
-                            <h4>Free Updates & Support</h4>
-                            <p>Lorem ipsum dolor sit amet, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -199,9 +181,7 @@
             <div class="container">
                 <div class="heading-text heading-section">
                     <h2>Nuestros productos</h2>
-                    <span class="lead">Lorem ipsum dolor sit amet, coper suscipit lobortis nisl ut aliquip ex ea commodo
-                        consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-                        consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto.</span>
+                    <span class="lead">En MDLR encontrarás variedad de productos para iniciarte en el mundo del streetwear de la mano de marcas icónicas como Stussy y Off-White.</span>
                 </div>
             </div>
             <div class="portfolio">
@@ -242,7 +222,7 @@
             <div class="container">
                 <div class="heading-text heading-section text-center">
                     <h2>NUESTRAS MARCAS</h2>
-                    <span class="lead">Our awesome clients we've had the pleasure to work with! </span>
+                    <span class="lead">¡Nuestras increíbles marcas con las que tenemos el placer de trabajar!</span>
                 </div>
                 <div class="carousel client-logos" data-items="6" data-items-sm="4" data-items-xs="3" data-items-xxs="2" data-margin="20" data-arrows="false" data-autoplay="false" data-autoplay="3000" data-loop="false">
                     <div>
@@ -264,11 +244,13 @@
     <!-- end: CLIENTS -->
     <!-- Footer -->
     <br>
-    <div class="copyright-content">
-        <div class="container">
-            <div class="copyright-text text-center">&copy; 2021 MDLR - Hecho con amor y cariño en Madrid.</div>
-        </div>
-    </div>
+    <footer id="footer">
+            <div class="copyright-content">
+                <div class="container">
+                    <div class="copyright-text text-center">© 2021 MDLR - Hecho con amor y cariño en Madrid.</div>
+                </div>
+            </div>
+        </footer>
     </footer>
     <!-- end: Footer -->
     </div>

@@ -3,25 +3,39 @@
 // Devolver el precio total con la cantidad hacer en el con js
 
 
-function sumar(id, talla) {
+function sumar() {
     $('#cantidad').val(Number($('#cantidad').val()) + 1).change();
-    var cantidad = $('#cantidad').val(Number($('#cantidad').val()) + 1);
-    actualizar_carrito(id, talla, cantidad, actualizar);
 }
 
 function menos() {
-    if (document.getElementById('cantidad').value > 1) {
+    if (document.getElementById('cantidad').value > 0) {
         $('#cantidad').val(Number($('#cantidad').val()) - 1).change();
-        var cantidad = $('#cantidad').val(Number($('#cantidad').val()) - 1);
+    }
+}
+
+function mas_carrito(id, talla) {
+    $('#cantidad').val(Number($('#cantidad').val()) + 1).change();
+    var cantidad = $('#cantidad').val(Number($('#cantidad').val()));
+    actualizar_carrito(id, talla, cantidad, actualizar);
+}
+
+function menos_carrito(id, talla) {
+    if (document.getElementById('cantidad').value > 0) {
+        $('#cantidad').val(Number($('#cantidad').val()) - 1).change();
+        var cantidad = $('#cantidad').val(Number($('#cantidad').val()));
         actualizar_carrito(id, talla, cantidad, actualizar);
     }
+}
+
+function borrar_producto(id, talla) {
+    actualizar_carrito(id, talla, 0, borrar);
 }
 
 function actualizar_carrito(id, talla, cantidad, operacion) {
     var peticion = $.ajax({
         url: "actualizar_carrito.php",
         type: "POST",
-        async: false,
+        async: true,
         data: {
             id: id,
             talla: talla,
@@ -31,6 +45,8 @@ function actualizar_carrito(id, talla, cantidad, operacion) {
         success: function (data) {
             //NO DEVUELVE NADA, LO ACTUALIZA DIRECTAMENTE CON EL CLIENTE
             //ESTO ES SOLO PARA ALMACENARLO EN LA VARIABLE DE SESION
+            document.getElementById("carrito").innerHTML="";
+            $("#carrito").html(actualizar_carrito.responseText);
         }
     })
 }
