@@ -18,7 +18,7 @@
 <body>
     <!-- Body Inner -->
     <div class="body-inner">
-        <?php include("./header.html") ?>
+        <?php include("./header.php") ?>
         <!-- Page title -->
         <section id="page-title">
             <div class="container">

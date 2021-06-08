@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +19,7 @@
     <div class="body-inner">
         <!-- Header -->
         <?php
-            include("header.html");
+            include("header.php");
         ?>
         <!-- end: Header -->
         <!-- Page title -->
@@ -193,45 +192,21 @@
                         <p class="lead">Our awesome clients we've had the pleasure to work with!</p>
                     </div>
                 </div>
-                <ul class="grid grid-5-columns">
+                <ul class="grid grid-4-columns">
                     <li>
-                        <a href="#"><img src="images/clients/1.png" alt="">
+                        <a href="#"><img src="images/clients/casablanca.jpg" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#"><img src="images/clients/2.png" alt="">
+                        <a href="#"><img src="images/clients/gucci.jpg" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#"><img src="images/clients/3.png" alt="">
+                        <a href="#"><img src="images/clients/off-white.jpg" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#"><img src="images/clients/4.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/clients/5.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/clients/6.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/clients/7.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/clients/8.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/clients/9.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/clients/10.png" alt="">
+                        <a href="#"><img src="images/clients/stussy.jpg" alt="">
                         </a>
                     </li>
                 </ul>

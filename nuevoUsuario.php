@@ -101,13 +101,19 @@ session_start();
                                             <?php
                                             $provincias = array("Álava", "Albacete", "Alicante", "Almería", "Asturias", "Ávila", "Badajoz", "Barcelona", "Burgos", "Cáceres", "Cádiz", "Cantabria", "Castellón", "Ciudad Real", "Córdoba", "Cuenca", "Gerona", "Granada", "Guadalajara", "Guipúzcoa", "Huelva", "Huesca", "Islas Baleares", "Jaén", "La Coruña", "La Rioja", "Las Palmas", "León", "Lérida", "Lugo", "Madrid", "Málaga", "Murcia", "Navarra", "Orense", "Palencia", "Pontevedra", "Salamanca", "Santa Cruz de Tenerife", "Segovia", "Sevilla", "Soria", "Tarragona", "Teruel", "Toledo", "Valencia", "Valladolid", "Vizcaya", "Zamora", "Zaragoza");
                                             for ($i = 0; $i < count($provincias); $i++) {
-                                                echo ("<option>" . $provincias[$i] . "</option>");
+                                                echo ("<option value='" . $provincias[$i] . "'>" . $provincias[$i] . "</option>");
                                             }
                                             ?>
                                         </select>
                                     </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="state">País</label>
+                                        <select id="pais" name="pais" class="form-control" required>
+                                            <option value="españa" selected>España</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <button type="submit" class="btn m-t-30 mt-3">Registrar Usuario</button>
+                                <button type="button" id="crearUsuario" class="btn m-t-30 mt-3">Registrar Usuario</button>
                                 <a href="index.php"></a><button type="submit" class="btn m-t-30 mt-3">Volver al index</button>
                             </form>
                         </div>
@@ -207,6 +213,7 @@ session_start();
             var ciudad = $("#ciudad").val();
             var codigoPostal = $("#codigoPostal").val();
             var provincia = $("#provincia").val();
+            var pais = $("#pais").val();
             var peticion = $.ajax({
                 url: "cont_nuevoUsuario.php",
                 type: "POST",
@@ -221,7 +228,8 @@ session_start();
                     lineaDireccion1: lineaDireccion1,
                     ciudad: ciudad,
                     codigoPostal: codigoPostal,
-                    provincia: provincia
+                    provincia: provincia,
+                    pais: pais
                 },
                 success: function(data) {
                     $("#respuesta").html(peticion.responseText);

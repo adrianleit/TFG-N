@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!-- Topbar -->
 <div id="topbar" class="topbar-fullwidth d-none d-lg-block">
     <div class="container">
@@ -11,12 +12,9 @@
             <div class="col-md-6 d-none d-sm-block">
                 <div class="social-icons social-icons-colored-hover">
                     <ul>
-                        <li class="social-facebook"><a href="https://www.facebook.com/MDLR-Streetwear-107759258165885"
-                                target="newtab"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="social-twitter"><a href="https://twitter.com/MdlrStreetwear" target="newtab"><i
-                                    class="fab fa-twitter"></i></a></li>
-                        <li class="social-instagram"><a href="https://www.instagram.com/mdlr_streetwear/"
-                                target="newtab"><i class="fab fa-instagram"></i></a></li>
+                        <li class="social-facebook"><a href="https://www.facebook.com/MDLR-Streetwear-107759258165885" target="newtab"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social-twitter"><a href="https://twitter.com/MdlrStreetwear" target="newtab"><i class="fab fa-twitter"></i></a></li>
+                        <li class="social-instagram"><a href="https://www.instagram.com/mdlr_streetwear/" target="newtab"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -36,15 +34,6 @@
                 </a>
             </div>
             <!--End: Logo-->
-            <!-- Search -->
-            <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i
-                        class="icon-x"></i></a>
-                <form class="search-form" action="search-results-page.php" method="get">
-                    <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
-                    <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                </form>
-            </div>
-            <!-- end: search -->
             <!--Header Extras-->
             <div class="header-extras">
                 <ul>
@@ -52,9 +41,6 @@
                         <a href="shop-cart.php">
                             <i class="icon-shopping-cart"></i>
                         </a>
-                    </li>
-                    <li>
-                        <a id="btn-search" href="#"> <i class="icon-search"></i></a>
                     </li>
                     <li>
                         <div class="p-dropdown">
@@ -113,6 +99,15 @@
                                 </ul>
                             </li>
                             <li><a href="page-about-basic.php">Sobre Nosotros</a></li>
+                            <li>
+                                <?php
+                                if (isset($_SESSION["NombreCliente"])) {
+                                    echo ("<a href='borrar.php'><i class='fa fa-power-off'></i>" . $_SESSION["NombreCliente"] . "</a></li>");
+                                } else {
+                                    echo ("<a href='login.php'><i class='icon-user'></i></a>");
+                                }
+                                ?>
+                            </li>
                         </ul>
                     </nav>
                 </div>

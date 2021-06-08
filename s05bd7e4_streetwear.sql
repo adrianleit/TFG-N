@@ -944,13 +944,14 @@ CREATE TABLE IF NOT EXISTS `transacciones` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
-DROP TABLE IF EXISTS `usuario`;
-CREATE TABLE IF NOT EXISTS `usuario` (
+DROP TABLE IF EXISTS `usuarios`;
+CREATE TABLE IF NOT EXISTS `usuarios` (
   `nombre` varchar(50) COLLATE latin1_spanish_ci NOT NULL,
   `id_usuario` varchar(50) COLLATE latin1_spanish_ci NOT NULL,
+  `email` varchar(50) COLLATE latin1_spanish_ci NOT NULL,
   `clave` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `apellido` varchar(50) COLLATE latin1_spanish_ci NOT NULL,
   `pais` varchar(50) COLLATE latin1_spanish_ci NOT NULL,
@@ -971,7 +972,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- Filtros para la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  ADD CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `comentarios_ibfk_2` FOREIGN KEY (`id_comentario`) REFERENCES `productos` (`comentario`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
@@ -990,7 +991,7 @@ ALTER TABLE `tallas`
 -- Filtros para la tabla `transacciones`
 --
 ALTER TABLE `transacciones`
-  ADD CONSTRAINT `transacciones_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`);
+  ADD CONSTRAINT `transacciones_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

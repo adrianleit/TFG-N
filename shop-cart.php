@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -24,7 +20,7 @@ session_start();
     <!-- Body Inner -->
     <div class="body-inner">
         <!-- Header -->
-        <?php include("./header.html") ?>
+        <?php include("header.php") ?>
         <!-- end: Header -->
         <!-- SHOP CART -->
         <p id="carrito"></p>

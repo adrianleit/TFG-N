@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -31,14 +32,6 @@
                         </a>
                     </div>
                     <!--End: Logo-->
-                    <!-- Search -->
-                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
-                        <form class="search-form" action="search-results-page.php" method="get">
-                            <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
-                    <!-- end: search -->
                     <!--Header Extras-->
                     <div class="header-extras">
                         <ul>
@@ -46,9 +39,6 @@
                                 <a href="shop-cart.php">
                                     <i class="icon-shopping-cart"></i>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="login.php"> <i class="icon-user"></i></a>
                             </li>
                             <li>
                                 <div class="p-dropdown">
@@ -107,6 +97,15 @@
                                         </ul>
                                     </li>
                                     <li><a href="page-about-basic.php">Sobre Nosotros</a></li>
+                                    <li>
+                                        <?php
+                                        if (isset($_SESSION["NombreCliente"])) {
+                                            echo ("<a href='borrar.php'><i class='fa fa-power-off'></i>".$_SESSION["NombreCliente"]."</a></li>");
+                                        } else {
+                                            echo ("<a href='login.php'><i class='icon-user'></i>INICIAR SESION</a>");
+                                        }
+                                        ?>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -245,12 +244,11 @@
     <!-- Footer -->
     <br>
     <footer id="footer">
-            <div class="copyright-content">
-                <div class="container">
-                    <div class="copyright-text text-center">© 2021 MDLR - Hecho con amor y cariño en Madrid.</div>
-                </div>
+        <div class="copyright-content">
+            <div class="container">
+                <div class="copyright-text text-center">© 2021 MDLR - Hecho con amor y cariño en Madrid.</div>
             </div>
-        </footer>
+        </div>
     </footer>
     <!-- end: Footer -->
     </div>

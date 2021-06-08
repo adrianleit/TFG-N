@@ -25,7 +25,7 @@
     <!-- Body Inner -->
     <div class="body-inner">
         <?php
-        include("./header.html");
+        include("header.php");
         $id_producto = $_GET['id'];
         if ($conexion = mysqli_connect('localhost', 'root', '', 's05bd7e4_streetwear')) {
             mysqli_set_charset($conexion, 'utf8');

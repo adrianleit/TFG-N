@@ -20,16 +20,13 @@
     <!-- Body Inner -->
     <div class="body-inner">
         <!-- Topbar y Header -->
-        <?php include("header.html") ?>
+        <?php include("header.php") ?>
         <!-- Fin Header -->
         <!-- Shop products -->
         <section>
             <div class="container"><div class="row m-b-20">
                     <div class="col-lg-6 p-t-10 m-b-20">
-                        <h2 class="m-b-20">Stussy</h2>
-                    </div>
-                </div>
-                        <h2 class="m-b-20">Stussy</h2>
+                        <h2 class="m-b-20">Pantalones Gucci</h2>
                     </div>
                 </div>
                 <div class="shop">

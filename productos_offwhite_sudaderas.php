@@ -20,18 +20,16 @@
     <!-- Body Inner -->
     <div class="body-inner">
         <!-- Topbar y Header -->
-        <?php include("header.html") ?>
+        <?php include("header.php") ?>
         <!-- Fin Header -->
         <!-- Shop products -->
         <section>
             <div class="container"><div class="row m-b-20">
                     <div class="col-lg-6 p-t-10 m-b-20">
-                        <h2 class="m-b-20">Stussy</h2>
+                        <h2 class="m-b-20">Sudaderas Off-White</h2>
                     </div>
                 </div>
-                        <h2 class="m-b-20">Stussy</h2>
-                    </div>
-                </div>
+
                 <div class="shop">
                     <div class="grid-layout grid-4-columns" data-item="grid-item">
                         <!-- Solo un elemento -->

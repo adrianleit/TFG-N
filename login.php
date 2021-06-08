@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -20,7 +19,7 @@
     <!-- Body Inner -->
     <div class="body-inner">
         <!-- Header -->
-        <?php include("./header.html"); ?>
+        <?php include("header.php"); ?>
         <!-- end: Header -->
         <!-- Page Content -->
         <section id="page-content">

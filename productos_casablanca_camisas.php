@@ -20,7 +20,7 @@
     <!-- Body Inner -->
     <div class="body-inner">
         <!-- Topbar y Header -->
-        <?php include("header.html") ?>
+        <?php include("header.php") ?>
         <!-- Fin Header -->
         <!-- Shop products -->
         <section>

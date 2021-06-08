@@ -20,7 +20,7 @@
     <!-- Body Inner -->
     <div class="body-inner">
         <!-- Header -->
-        <?php include("./header.html") ?>
+        <?php include("./header.php") ?>
         <!-- end: Header -->
         <!-- Page title -->
         <section id="page-title">
