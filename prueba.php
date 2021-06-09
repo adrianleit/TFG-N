@@ -1,13 +1,9 @@
 <?php
 session_start();
-if (isset($productos)) {
+
+if (isset($_SESSION['carrito'])) {
     //Recorremos la variable de sesion
     /*Si la variable de sesion existe, se recorre con un bucle en busca de conincidencias con el id 
-        del producto ($productos[0]) y la talla del producto($productos[1]) */
-    for ($i = 0; $i < count($productos); $i++) {
-        if ($id == $productos[$i][0] && $talla == $productos[$i][1]) {
-            unset($productos[$i]);
-            sort($productos);
-        }
-    }
+        del producto ($SESSION['carrito'][0]) y la talla del producto($SESSION['carrito'][1]) */
+        echo(count($_SESSION['carrito']));
 }

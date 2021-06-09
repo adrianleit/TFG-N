@@ -1,7 +1,8 @@
 <?php
+
 /** @author Adrian Delgado y Alejandro García 
  * @version 2021.06 MDLR
-*/
+ */
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -86,7 +87,7 @@
                                             <div class="product-reviews"><a href="#">3 customer reviews</a>
                                             </div>
                                             <div class="seperator m-b-10"></div>
-                                            <?php echo("<p>$fila[7]</p>") ?>
+                                            <?php echo ("<p>$fila[7]</p>") ?>
                                             <div class="seperator m-t-20 m-b-10"></div>
                                         </div>
                                         <form action="controlador_carrito.php" method="POST">
@@ -153,61 +154,19 @@
                                 <div class="tabs tabs-folder">
                                     <ul class="nav nav-tabs" id="myTab3" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active show" id="home-tab" data-toggle="tab" href="#home3" role="tab" aria-controls="home" aria-selected="false"><i class="fa fa-align-justify"></i>Descripcion</a></a>
+                                            <a class="nav-link active show" id="home-tab" data-toggle="tab" href="#home3" role="tab" aria-controls="home" aria-selected="false"><i class="fa fa-align-justify"></i>Añadir Cometarios</a></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile3" role="tab" aria-controls="profile" aria-selected="true"><i class="fa fa-info"></i>Informacion Adicional</a></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact3" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-star"></i>Reseñas</a></a>
+                                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact3" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-star"></i>Comentarios</a></a>
                                         </li>
                                     </ul>
                                     <div class="tab-content" id="myTabContent3">
                                         <div class="tab-pane fade active show" id="home3" role="tabpanel" aria-labelledby="home-tab">
-                                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-                                                minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis
-                                                dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
-                                                necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
-                                                recusandae. </p>
-                                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                                                voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                                                occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
-                                                mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et
-                                                expedita distinctio.</p>
-                                        </div>
-                                        <div class="tab-pane fade " id="profile3" role="tabpanel" aria-labelledby="profile-tab">
-                                            <table class="table table-striped table-bordered">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Size</td>
-                                                        <td>Small, Medium &amp; Large</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Color</td>
-                                                        <td>Pink &amp; White</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Waist</td>
-                                                        <td>26 cm</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Length</td>
-                                                        <td>40 cm</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Chest</td>
-                                                        <td>33 inches</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Fabric</td>
-                                                        <td>Cotton, Silk &amp; Synthetic</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Warranty</td>
-                                                        <td>3 Months</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                            <!-- Formulario del comentario -->
+                                            <form>
+                                                <textarea name="comentario" maxlength="140" placeholder=" Escribe aqui tu comentario" style="width: 100%;"></textarea>
+                                                <button type="button" class="btn" id="añadirComentario">Añadir al carrito</button>
+                                            </form>
                                         </div>
                                         <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact-tab">
                                             <div class="comments" id="comments">
@@ -356,7 +315,28 @@
     <script src="js/cantidad.js"></script>
     <!-- Ajax comentarios -->
     <script>
-    
+        $(document).ready(function() {
+            crearComentario("mostrar");
+            
+            $("#añadirComentario").on("click", function() {
+                crearComentario("crear");
+            });
+        })
+
+        function crearComentario(operacion) {
+            var peticion_mostrar = $.ajax({
+                url: "cont_comentario.php",
+                type: "POST",
+                async: true,
+                data: {
+                    comentario: $("#comentario").val(),
+                    operacion: operacion
+                },
+                success: function(data) {
+                    $("#visualizacion_comentarios").html(peticion_mostrar.responseText);
+                }
+            })
+        }
     </script>
 </body>
 

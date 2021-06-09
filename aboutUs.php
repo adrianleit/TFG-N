@@ -36,32 +36,10 @@
         <section class="p-b-10">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="heading-text heading-section">
                             <h2>LA EMPRESA</h2>
                             <span class="lead">MDLR es un proyecto nacido de la idea de dos jóvenes programadores, apasionados por el mundo del streetwear , con unas ganas infinitas de crear un proyecto sólido, apasionante en el cual hemos volcado todo nuestro esfuerzo y nuestra ilusión. Por ello, en MDLR hemos confeccionado un proyecto ambicioso aportando nuestros conocimientos acerca del mundo del streetwear, ayudados por nuestro saber en el mundo de la programación y el diseño web. Esperamos crecer junto a todos vosotros en este apasionante proyecto. </span>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 m-t-60">
-                        <div class="p-progress-bar-container title-up small extra-small color">
-                            <div class="p-progress-bar" data-percent="100" data-delay="100" data-type="%">
-                                <div class="progress-title">HTML5</div>
-                            </div>
-                        </div>
-                        <div class="p-progress-bar-container title-up small extra-small color">
-                            <div class="p-progress-bar" data-percent="94" data-delay="200" data-type="%">
-                                <div class="progress-title">CSS3</div>
-                            </div>
-                        </div>
-                        <div class="p-progress-bar-container title-up small extra-small color">
-                            <div class="p-progress-bar" data-percent="78" data-delay="300" data-type="%">
-                                <div class="progress-title">JQUERY</div>
-                            </div>
-                        </div>
-                        <div class="p-progress-bar-container title-up small extra-small color">
-                            <div class="p-progress-bar" data-percent="65" data-delay="400" data-type="%">
-                                <div class="progress-title">MYSQL</div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -137,52 +115,6 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div class="container">
-                <div class="heading-text heading-section text-center">
-                    <h2>WHAT WE DO</h2>
-                    <span class="lead">Create amaThe most happiest time of the day!.</span>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div>
-                            <h4>Web Development</h4>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div>
-                            <h4>Social Marketing</h4>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div>
-                            <h4>Graphic Design</h4>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div>
-                            <h4>Web Design</h4>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div>
-                            <h4>App Development</h4>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div>
-                            <h4>Hosting services</h4>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <div class="seperator"><i class="fa fa-chevron-down"></i>
         </div>
         <section>
@@ -213,76 +145,15 @@
             </div>
         </section>
         <!-- Footer -->
-        <footer id="footer">
-            <div class="footer-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <div class="widget">
-                                <div class="widget-title">Polo HTML5 Template</div>
-                                <p class="mb-5">Built with love in Fort Worth, Texas, USA<br>
-                                    All rights reserved. Copyright © 2019. INSPIRO.</p>
-                                <a href="https://themeforest.net/item/polo-responsive-multipurpose-html5-template/13708923" class="btn btn-inverted" target="_blank">Purchase Now</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="widget">
-                                        <div class="widget-title">Discover</div>
-                                        <ul class="list">
-                                            <li><a href="#">Features</a></li>
-                                            <li><a href="#">Layouts</a></li>
-                                            <li><a href="#">Corporate</a></li>
-                                            <li><a href="#">Updates</a></li>
-                                            <li><a href="#">Pricing</a></li>
-                                            <li><a href="#">Customers</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="widget">
-                                        <div class="widget-title">Features</div>
-                                        <ul class="list">
-                                            <li><a href="#">Layouts</a></li>
-                                            <li><a href="#">Headers</a></li>
-                                            <li><a href="#">Widgets</a></li>
-                                            <li><a href="#">Footers</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="widget">
-                                        <div class="widget-title">Pages</div>
-                                        <ul class="list">
-                                            <li><a href="#">Portfolio</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Shop</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="widget">
-                                        <div class="widget-title">Support</div>
-                                        <ul class="list">
-                                            <li><a href="#">Help Desk</a></li>
-                                            <li><a href="#">Documentation</a></li>
-                                            <li><a href="#">Contact Us</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <br>
+    <footer id="footer">
+        <div class="copyright-content">
+            <div class="container">
+                <div class="copyright-text text-center">© 2021 MDLR - Hecho con amor y cariño en Madrid.</div>
             </div>
-            <div class="copyright-content">
-                <div class="container">
-                    <div class="copyright-text text-center">&copy; 2019 POLO - Responsive Multi-Purpose HTML5 Template. All Rights Reserved.<a href="//www.inspiro-media.com" target="_blank" rel="noopener"> INSPIRO</a> </div>
-                </div>
-            </div>
-        </footer>
-        <!-- end: Footer -->
+        </div>
+    </footer>
+    <!-- end: Footer -->
     </div> <!-- end: Body Inner -->
     <!-- Scroll top -->
     <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>

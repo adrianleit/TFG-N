@@ -71,16 +71,16 @@ function mostrar()
             <div class="shop-cart">
                 <div class="table table-sm table-striped table-responsive">
                     <?php
-                    if (isset($_SESSION['carrito'])) {
+                    if (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
                     ?>
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th class="cart-product-remove"></th>
-                                    <th class="cart-product-thumbnail">Product</th>
-                                    <th class="cart-product-name">Description</th>
-                                    <th class="cart-product-price">Unit Price</th>
-                                    <th class="cart-product-quantity">Quantity</th>
+                                    <th class="cart-product-thumbnail">Producto</th>
+                                    <th class="cart-product-name">Descripción</th>
+                                    <th class="cart-product-price">Precio (por unidad)</th>
+                                    <th class="cart-product-quantity">Cantidad</th>
                                     <th class="cart-product-subtotal">Total</th>
                                 </tr>
                             </thead>
@@ -116,7 +116,7 @@ function mostrar()
                                             </p>
                                         </td>
                                         <td class="cart-product-price">
-                                            <span class="amount"><?php echo ($_SESSION['carrito'][$i][3]) ?>&euro;</span>
+                                            <span class="amount" id="cantidad_producto_individual<?php echo($i); ?>"><?php echo ($_SESSION['carrito'][$i][3]) ?>&euro;</span>
                                         </td>
                                         <td class="cart-product-quantity">
                                             <div class="quantity">
@@ -126,12 +126,14 @@ function mostrar()
                                             </div>
                                         </td>
                                         <td class="cart-product-subtotal">
-                                            <span class="amount">$20.00</span>
+                                            <span class="amount" id="cantidad_producto_total"><?php echo ($_SESSION['carrito'][$i][2] * $_SESSION['carrito'][$i][3]) ?>&euro;</span>
                                         </td>
                                     </tr>
+                                    
                                 <?php
                                 }
                                 ?>
+                                <span class="amount" id="numero_productos" style="display: none;"><?php echo(count($_SESSION['carrito'])); ?></span>
                             </tbody>
                         </table>
                 </div>

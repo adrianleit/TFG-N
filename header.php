@@ -98,7 +98,7 @@
                                     <li><a href="./productos_stussy_sudaderas.php">Sudaderas</a></li>
                                 </ul>
                             </li>
-                            <li><a href="page-about-basic.php">Sobre Nosotros</a></li>
+                            <li><a href="aboutUs.php">Sobre Nosotros</a></li>
                             <li>
                                 <?php
                                 if (isset($_SESSION["NombreCliente"])) {
