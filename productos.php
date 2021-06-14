@@ -65,7 +65,7 @@
                     <div class="grid-layout grid-4-columns" data-item="grid-item">
                         <!-- Solo un elemento -->
                         <?php
-                        if ($conexion = mysqli_connect('localhost', 'root', '', 's05bd7e4_streetwear')) {
+                        if ($conexion = mysqli_connect('91.199.120.17', 's05bd7e4_streetwear', 'Adrian2001', 's05bd7e4_streetwear')) {
                             mysqli_set_charset($conexion, 'utf8');
                             $consulta = "SELECT  * FROM productos;";
                             mysqli_query($conexion, $consulta);

@@ -188,7 +188,7 @@
                 <div id="portfolio" class="grid-layout portfolio-4-columns" data-margin="0">
                     <!-- portfolio item -->
                     <?php
-                    if ($conexion = mysqli_connect('localhost', 'root', '', 's05bd7e4_streetwear')) {
+                    if ($conexion = mysqli_connect('91.199.120.17', 's05bd7e4_streetwear', 'Adrian2001', 's05bd7e4_streetwear')) {
                         mysqli_set_charset($conexion, 'utf8');
                         $consulta = "SELECT nombre, id FROM productos ORDER BY RAND() LIMIT 8";
                         mysqli_query($conexion, $consulta);
@@ -199,7 +199,7 @@
                                 echo ("<div class='portfolio-slider'>");
                                 echo ("<div class='carousel dots-inside dots-dark arrows-dark' data-items='1' data-loop='true' data-autoplay='true' data-animate-in='fadeIn' data-animate-out='fadeOut' data-autoplay='1500'>");
                                 for ($i = 1; $i < 3; $i++) {
-                                    echo ("<a href='shop-single-product.php?id=$fila[1]'><img alt='Shop product image!' src='./images/productos/" . $fila[1] . "_{$i}'>");
+                                    echo ("<a href='shop-single-product.php?id=$fila[1]'><img alt='Shop product image!' src='images/productos/" . $fila[1] . "_{$i}.jpg'>");
                                 }
                                 echo ("</div>");
                                 echo ("</div>");

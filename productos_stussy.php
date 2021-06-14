@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -37,7 +38,7 @@
                             <?php
                             $marca = "stussy";
 
-                            if ($conexion = mysqli_connect('localhost', 'root', '', 's05bd7e4_streetwear')) {
+                            if ($conexion = mysqli_connect('91.199.120.17', 's05bd7e4_streetwear', 'Adrian2001', 's05bd7e4_streetwear')) {
                                 mysqli_set_charset($conexion, 'utf8');
                                 $consulta = "SELECT  * FROM productos WHERE marca='$marca';";
                                 mysqli_query($conexion, $consulta);
@@ -48,8 +49,8 @@
                                 [2] => Precio
                                 [3] => Id
                                 [4] => Parte
-                                [5] => Comentario
-                                [6] => Sexo
+                                [5] => Sexo
+                                [6] => Descripcion
                                 */
 
                                     while ($fila = mysqli_fetch_row($resultado)) {

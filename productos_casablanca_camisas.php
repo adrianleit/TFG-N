@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -37,7 +38,7 @@
                         <?php
                         $marca="casablanca";
                         $parte="camisas";
-                        if ($conexion = mysqli_connect('localhost', 'root', '', 's05bd7e4_streetwear')) {
+                        if ($conexion = mysqli_connect('91.199.120.17', 's05bd7e4_streetwear', 'Adrian2001', 's05bd7e4_streetwear')) {
                             mysqli_set_charset($conexion, 'utf8');
                             $consulta = "SELECT  * FROM productos WHERE marca='$marca' AND parte='$parte';";
                             mysqli_query($conexion, $consulta);
@@ -48,8 +49,8 @@
                                 [2] => Precio
                                 [3] => Id
                                 [4] => Parte
-                                [5] => Comentario
-                                [6] => Sexo
+                                [5] => Sexo
+                                [6] => Descripcion
                                 */
 
                                 while ($fila = mysqli_fetch_row($resultado)) {
@@ -57,7 +58,7 @@
                                     echo ("<div class='product'>");
                                     echo ("<div class='product-image'>");
                                     for ($i=1; $i < 3; $i++) { 
-                                        echo ("<a href='shop-single-product.php?id=$fila[3]'><img alt='Shop product image!' src='./images/productos/".$fila[3]."_{$i}'>");
+                                        echo ("<a href='shop-single-product.php?id=$fila[3]'><img alt='Shop product image!' src='images/productos/".$fila[3]."_{$i}.jpg'>");
                                         echo ("</a>");
                                     }
                                     echo ("<span class='product-wishlist'>");
@@ -68,7 +69,7 @@
                                     echo ("</div>");
                                     echo ("</div>");
                                     echo ("<div class='product-description'>");
-                                    echo ("<div class='product-category'>$fila[6]</div>");
+                                    echo ("<div class='product-category'>$fila[5]</div>");
                                     echo ("<div class='product-title'>");
                                     echo ("<h3><a href='shop-single-product.php?id=$fila[3]' id='vista_rapida'>$fila[1]</a></h3>");
                                     echo ("</div>");

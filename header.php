@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!-- Topbar -->
 <div id="topbar" class="topbar-fullwidth d-none d-lg-block">
     <div class="container">
