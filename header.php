@@ -98,14 +98,19 @@
                                 </ul>
                             </li>
                             <li><a href="aboutUs.php">Sobre Nosotros</a></li>
-                            <li>
-                                <?php
-                                if (isset($_SESSION["NombreCliente"])) {
-                                    echo ("<a href='borrar.php'><i class='fa fa-power-off'></i>" . $_SESSION["NombreCliente"] . "</a></li>");
-                                } else {
-                                    echo ("<a href='login.php'><i class='icon-user'></i></a>");
-                                }
-                                ?>
+                            <?php
+                            if (isset($_SESSION["NombreCliente"])) {
+                                echo ("<li class='dropdown'><a><i class='fa fa-power-off'></i>" . $_SESSION["NombreCliente"]). "</a>";
+                                echo ("<ul class='dropdown-menu'>");
+                                echo ("<li><a href='./borrar.php'>Cerrar Sesion</a></li>");
+                                echo ("</ul>");
+                                echo ("</li>");
+                            } else {
+                                echo ("<li>");
+                                echo ("<a href='login.php'><i class='icon-user'></i></a>");
+                                echo ("</li>");
+                            }
+                            ?>
                             </li>
                         </ul>
                     </nav>

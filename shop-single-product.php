@@ -10,9 +10,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="INSPIRO" />
-    <meta name="description" content="Themeforest Template Polo, html template">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="author" content="Adrian Delgado y Alejandro Garcia" />
+    <meta name="description" content="Tienda
+ MDLR">
+    <link rel="icon" type="image/png" href="images/icono.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
     <title>MDLR | Productos</title>
@@ -204,8 +205,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-plane"></i></a>
                             </div>
-                            <h3>Envios a todo el mundo</h3>
-                            <p>Nuestros envios se encuentran disponibles a los siguientes paises: EEUU, Canada, Europa, Australia</p>
+                            <h3>Envios a toda España</h3>
+                            <p>Nuestros envios se encuentran disponibles a toda la península y las Islas Baleares e Islas Canarias</p>
                         </div>
                     </div>
                     <div class="col-lg-4">

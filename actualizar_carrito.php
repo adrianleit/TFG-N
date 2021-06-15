@@ -95,7 +95,7 @@ function mostrar()
                                 // $_SESSION['carrito'][][5] => Parte de Ropa
                                 // $_SESSION['carrito'][][6] => Sexo
                                 // $_SESSION['carrito'][][7] => Nombre
-
+                                $precio_total=0;
                                 for ($i = 0; $i < count($_SESSION['carrito']); $i++) {
                                     // $producto=explode(",",$_SESSION['carrito']);
                                 ?>
@@ -105,7 +105,7 @@ function mostrar()
                                         </td>
                                         <td class="cart-product-thumbnail">
                                             <?php echo ("<a href='shop-single-product.php?id=" . $_SESSION['carrito'][$i][0] . "'>");
-                                            echo ("<img src='images/productos/" . $_SESSION['carrito'][$i][0] . "_1'.jpg' alt='FOTO'"); ?>
+                                            echo ("<img src='images/productos/" . $_SESSION['carrito'][$i][0] . "_1.jpg' alt='FOTO'"); ?>
                                             </a>
                                             <div class="cart-product-thumbnail-name"><?php echo ($_SESSION['carrito'][$i][7]) ?></div>
                                         </td>
@@ -121,27 +121,22 @@ function mostrar()
                                         <td class="cart-product-quantity">
                                             <div class="quantity">
                                                 <input type="button" class="minus" onclick="menos_carrito('<?php echo ($_SESSION['carrito'][$i][0]) ?>', '<?php echo $_SESSION['carrito'][$i][1] ?>');" value="-">
-                                                <input type="text" class="qty" id="cantidad" value="<?php echo ($_SESSION['carrito'][$i][2]) ?>" name="quantity">
+                                                <input type="text" class="qty" id="cantidad_<?php echo($_SESSION['carrito'][$i][0]."_".$_SESSION['carrito'][$i][1])?>" value="<?php echo ($_SESSION['carrito'][$i][2]) ?>" name="quantity">
                                                 <input type="button" class="plus" onclick="mas_carrito('<?php echo $_SESSION['carrito'][$i][0] ?>', '<?php echo $_SESSION['carrito'][$i][1] ?>');" value="+">
                                             </div>
                                         </td>
                                         <td class="cart-product-subtotal">
-                                            <span class="amount" id="cantidad_producto_total"><?php echo ($_SESSION['carrito'][$i][2] * $_SESSION['carrito'][$i][3]) ?>&euro;</span>
+                                            <span class="amount" id="precio_total_<?php echo($_SESSION['carrito'][$i][0]."_".$_SESSION['carrito'][$i][1])?>"><?php echo ($_SESSION['carrito'][$i][2] * $_SESSION['carrito'][$i][3]) ?>&euro;</span>
                                         </td>
                                     </tr>
                                     
                                 <?php
+                                $precio_total=$precio_total+($_SESSION['carrito'][$i][2] * $_SESSION['carrito'][$i][3]);
                                 }
                                 ?>
                                 <span class="amount" id="numero_productos" style="display: none;"><?php echo(count($_SESSION['carrito'])); ?></span>
                             </tbody>
                         </table>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 text-right">
-                        <!-- Tiene un evento en cantidad.js -->
-                        <button type="button" class="btn" id="update_cart">Update Card</button>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 p-r-10 ">
@@ -151,18 +146,18 @@ function mostrar()
                                 <tbody>
                                     <tr>
                                         <td class="cart-product-name">
-                                            <strong>Cart Subtotal</strong>
+                                            <strong>Subtotal del carrito</strong>
                                         </td>
                                         <td class="cart-product-name text-right">
-                                            <span class="amount">$125.96</span>
+                                            <span class="amount" id="precio_total"><?php echo($precio_total)?>&euro;</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="cart-product-name">
-                                            <strong>Shipping</strong>
+                                            <strong>Envio</strong>
                                         </td>
                                         <td class="cart-product-name  text-right">
-                                            <span class="amount">Free Shipping</span>
+                                            <span class="amount">Envio Gratuito</span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -170,13 +165,13 @@ function mostrar()
                                             <strong>Total</strong>
                                         </td>
                                         <td class="cart-product-name text-right">
-                                            <span class="amount color lead"><strong>$100.76</strong></span>
+                                            <span class="amount color lead"><strong><?php echo($precio_total)?>&euro;</strong></span>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <a href="#" class="btn icon-left float-right"><span>Proceed to Checkout</span></a>
+                        <a href="#" class="btn icon-left float-right"><span>Proceder a la Compra</span></a>
                     </div>
                 </div>
             <?php

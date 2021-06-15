@@ -5,9 +5,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="INSPIRO" />
-    <meta name="description" content="Themeforest Template Polo, html template">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="author" content="Adrian Delgado y Alejandro Garcia" />
+    <meta name="description" content="Tienda
+ MDLR">
+    <link rel="icon" type="image/png" href="images/icono.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
     <title>MDLR | Home</title>
@@ -97,15 +98,19 @@
                                         </ul>
                                     </li>
                                     <li><a href="aboutUs.php">Sobre Nosotros</a></li>
-                                    <li>
-                                        <?php
-                                        if (isset($_SESSION["NombreCliente"])) {
-                                            echo ("<a href='borrar.php'><i class='fa fa-power-off'></i>".$_SESSION["NombreCliente"]."</a></li>");
-                                        } else {
-                                            echo ("<a href='login.php'><i class='icon-user'></i>INICIAR SESION</a>");
-                                        }
-                                        ?>
-                                    </li>
+                                    <?php
+                                    if (isset($_SESSION["NombreCliente"])) {
+                                        echo ("<li class='dropdown'><a><i class='fa fa-power-off'></i>" . $_SESSION["NombreCliente"]) . "</a>";
+                                        echo ("<ul class='dropdown-menu'>");
+                                        echo ("<li><a href='./borrar.php'>Cerrar Sesion</a></li>");
+                                        echo ("</ul>");
+                                        echo ("</li>");
+                                    } else {
+                                        echo ("<li>");
+                                        echo ("<a href='login.php'><i class='icon-user'></i></a>");
+                                        echo ("</li>");
+                                    }
+                                    ?>
                                 </ul>
                             </nav>
                         </div>
@@ -161,14 +166,14 @@
                     </div>
                     <div class="col-lg-4">
                         <div data-animate="fadeInUp" data-animate-delay="200">
-                            <h4>Loaded with Features</h4>
-                            <p>Lorem ipsum dolor sit amet, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam.</p>
+                            <h4>Descuentos</h4>
+                            <p>Pronto dispondran de codigos de descuento canjeables a la hora de comprar sus prendas favoritas</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div data-animate="fadeInUp" data-animate-delay="400">
-                            <h4>Completely Customizable</h4>
-                            <p>Lorem ipsum dolor sit amet, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam.</p>
+                            <h4>Novedades</h4>
+                            <p>Dispondrá de las novedades de cada marca.</p>
                         </div>
                     </div>
                 </div>
@@ -242,7 +247,6 @@
     </div>
     <!-- end: CLIENTS -->
     <!-- Footer -->
-    <br>
     <footer id="footer">
         <div class="copyright-content">
             <div class="container">

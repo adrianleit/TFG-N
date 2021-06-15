@@ -21,14 +21,14 @@ session_start();
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="username">Id de Usuario</label>
-                                        <input type="text" class="form-control" id="id_usuario" name="id_usuario" placeholder="Enter username" required>
+                                        <input type="text" class="form-control" id="id_usuario" name="id_usuario" placeholder="Usuario" required>
                                         <div id="error_id_usuario">
                                             <p class='error'>El id de usuario debe tener minimo 1 caracter y maximo 50</p>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="email">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                                         <div id="error_email">
                                             <p class='error'>El email debe estar bien formado</p>
                                         </div>
@@ -36,9 +36,9 @@ session_start();
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="password">Password</label>
+                                        <label for="password">Contraseña</label>
                                         <div class="input-group show-hide-password">
-                                            <input class="form-control" id="clave" name="clave" placeholder="Enter password" type="password" required>
+                                            <input class="form-control" id="clave" name="clave" placeholder="Contraseña" type="password" required>
                                             <div id="error_clave">
                                                 <p class='error'>La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula. Puede tener otros símbolos.</p>
                                             </div>
@@ -47,41 +47,41 @@ session_start();
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="name">Name</label>
-                                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter your Name" required>
+                                        <label for="name">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
                                         <div id="error_nombre">
                                             <p class='error'>El nombre debe tener minimo 1 caracter y maximo 50</p>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="surname">Surname</label>
-                                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Enter your Surname" required>
+                                        <label for="surname">Apellidos</label>
+                                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Solo una apellido" required>
                                         <div id="error_apellido">
-                                            <p class='error'>Los apellidos debe tener minimo 1 caracter y maximo 100</p>
+                                            <p class='error'>El apellido debe tener minimo 1 caracter y maximo 100, y debe ir sin espacios</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="telephone">Telephone</label>
-                                        <input class="form-control" type="tel" id="telefono" name="telefono" placeholder="Enter your Telephone number" required>
+                                        <label for="telephone">Telefono</label>
+                                        <input class="form-control" type="tel" id="telefono" name="telefono" placeholder="Numero de telefono" required>
                                         <div id="error_telefono">
                                             <p class='error'>Debe ser un telefono movil de España. Admite los formatos "000000000", o 000-00-00-00, también el 000-000000</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="h5 mb-4">Mailing Address</div>
+                                <div class="h5 mb-4">Direccion de facturacion</div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="address">Address</label>
-                                        <input type="text" class="form-control" id="lineaDireccion1" name="lineaDireccion1" placeholder="Enter your Street Address" required>
+                                        <label for="address">Direccion</label>
+                                        <input type="text" class="form-control" id="lineaDireccion1" name="lineaDireccion1" placeholder="Direccion" required>
                                         <div id="error_lineaDireccion1">
                                             <p class='error'>La direccion debe tener minimo 1 caracter y maximo 500</p>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label>Zip Code:</label>
-                                        <input type="number" class="form-control" id="codigoPostal" name="codigoPostal" placeholder="Enter Zip Code" required>
+                                        <label>Codigo Postal:</label>
+                                        <input type="number" class="form-control" id="codigoPostal" name="codigoPostal" placeholder="Codigo Postal" required>
                                         <div id="error_codigoPostal">
                                             <p class='error'>El codigo postal debe estar entre el 01000 y el 52999</p>
                                         </div>
@@ -89,8 +89,8 @@ session_start();
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="city">City</label>
-                                        <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Enter your City" required>
+                                        <label for="city">Ciudad</label>
+                                        <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ciudad" required>
                                         <div id="error_ciudad">
                                             <p class='error'>La ciudad debe tener minimo 1 caracter y maximo 500</p>
                                         </div>
@@ -114,7 +114,7 @@ session_start();
                                     </div>
                                 </div>
                                 <button type="button" id="crearUsuario" class="btn m-t-30 mt-3">Registrar Usuario</button>
-                                <a href="index.php"></a><button type="submit" class="btn m-t-30 mt-3">Volver al index</button>
+                                <a href="index.php"><button type="button" class="btn m-t-30 mt-3">Volver</button></a>
                             </form>
                         </div>
                     </div>

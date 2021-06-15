@@ -38,7 +38,7 @@
                                         </td>
                                         <td class="cart-product-thumbnail">
                                             <?php echo ("<a href='shop-single-product.php?id=" . $_SESSION['carrito'][$i][0] . "'>");
-                                            echo ("<img src='./images/productos/" . $_SESSION['carrito'][$i][0] . "_1'.jpg' alt='FOTO'"); ?>
+                                            echo ("Hola"); ?>
                                             </a>
                                             <div class="cart-product-thumbnail-name"><?php echo ($_SESSION['carrito'][$i][7]) ?></div>
                                         </td>

@@ -1,9 +1,3 @@
-for (let i = 0; i < $("#numero_productos").val(); i++) {
-    $('#cantidad').val() * $('#cantidad_producto_individual').val();
-    
-}
-
-
 // Al sumar o restar una cantidad se mete en la funcion los parametros talla y el id del producto 
 // y se actualiza directamente en el carrito
 // Devolver el precio total con la cantidad hacer en el con js
@@ -20,16 +14,16 @@ function menos() {
 }
 
 function mas_carrito(id, talla) {
-    $('#cantidad').val(Number($('#cantidad').val()) + 1).change();
-    var cantidad = $('#cantidad').val();
+    $('#cantidad_'+id+'_'+talla).val(Number($('#cantidad_'+id+'_'+talla).val()) + 1).change();
+    var cantidad = $('#cantidad_'+id+'_'+talla).val();
     actualizar_carrito(id, talla, cantidad, "actualizar");
     
 }
 
 function menos_carrito(id, talla) {
-    if (document.getElementById('cantidad').value > 0) {
-        $('#cantidad').val(Number($('#cantidad').val()) - 1).change();
-        var cantidad = $('#cantidad').val();
+    if (document.getElementById('cantidad_'+id+'_'+talla).value > 0) {
+        $('#cantidad_'+id+'_'+talla).val(Number($('#cantidad_'+id+'_'+talla).val()) - 1).change();
+        var cantidad = $('#cantidad_'+id+'_'+talla).val();
         actualizar_carrito(id, talla, cantidad, "actualizar");
     }
 }
@@ -39,7 +33,7 @@ function borrar_producto(id, talla) {
 }
 
 function actualizar_carrito(id, talla, cantidad, operacion) {
-    var peticion = $.ajax({
+    var actualizar_carrito = $.ajax({
         url: "actualizar_carrito.php",
         type: "POST",
         async: true,

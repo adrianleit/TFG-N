@@ -5,9 +5,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="INSPIRO" />
-    <meta name="description" content="Themeforest Template Polo, html template">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="author" content="Adrian Delgado y Alejandro Garcia" />
+    <meta name="description" content="Tienda
+ MDLR">
+    <link rel="icon" type="image/png" href="images/icono.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
     <title>MDLR | Productos</title>
@@ -57,7 +58,7 @@
                                     echo ("<div class='product'>");
                                     echo ("<div class='product-image'>");
                                     for ($i = 1; $i < 3; $i++) {
-                                        echo ("<a href='shop-single-product.php?id=$fila[3]'><img alt='Shop product image!' src='./images/productos/" . $fila[3] . "_{$i}'>");
+                                        echo ("<a href='shop-single-product.php?id=$fila[3]'><img alt='Shop product image!' src='images/productos/" . $fila[3] . "_{$i}.jpg'>");
                                         echo ("</a>");
                                     }
                                     echo ("<span class='product-wishlist'>");
@@ -68,7 +69,7 @@
                                     echo ("</div>");
                                     echo ("</div>");
                                     echo ("<div class='product-description'>");
-                                    echo ("<div class='product-category'>$fila[6]</div>");
+                                    echo ("<div class='product-category'>$fila[5]</div>");
                                     echo ("<div class='product-title'>");
                                     echo ("<h3><a href='shop-single-product.php?id=$fila[3]' id='vista_rapida'>$fila[1]</a></h3>");
                                     echo ("</div>");
@@ -107,8 +108,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-plane"></i></a>
                             </div>
-                            <h3>Envios a todo el mundo</h3>
-                            <p>Nuestros envios se encuentran disponibles a los siguientes paises: EEUU, Canada, Europa, Australia</p>
+                            <h3>Envios a toda España</h3>
+                            <p>Nuestros envios se encuentran disponibles a toda la península y las Islas Baleares e Islas Canarias</p>
                         </div>
                     </div>
                     <div class="col-lg-4">

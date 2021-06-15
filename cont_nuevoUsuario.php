@@ -27,11 +27,12 @@ isset($_POST['ciudad']) && isset($_POST['codigoPostal']) && isset($_POST['provin
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO usuario (nombre, id_usuario, email, clave, apellido, region, codigoPostal, telefono, 
+    $sql = "INSERT INTO usuarios (nombre, id_usuario, email, clave, apellido, region, codigoPostal, telefono, 
     lineaDireccion1, pais) VALUES ('$nombre', '$id_usuario', '$email', '$clave', '$apellido', '$provincia', 
     $codigoPostal, $telefono, '$lineaDireccion1', '$pais');";
     if ($conn->query($sql) === TRUE) {
         echo "El usuario ha sido introducido en la base de datos";
+        header('Location:nuevoUsuario.php');
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

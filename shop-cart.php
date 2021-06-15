@@ -5,9 +5,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="INSPIRO" />
-    <meta name="description" content="Themeforest Template Polo, html template">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="author" content="Adrian Delgado y Alejandro Garcia" />
+    <meta name="description" content="Tienda MDLR">
+    <link rel="icon" type="image/png" href="images/icono.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
     <title>MDLR | Carrito</title>
@@ -35,8 +35,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-gift"></i></a>
                             </div>
-                            <h3>Free shipping on orders $60+</h3>
-                            <p>Order more than 60$ and you will get free shippining Worldwide. More info.</p>
+                            <h3>Envios gratuitos</h3>
+                            <p>En MDLR cargamos nosotros con los gastos de envio</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -44,8 +44,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-plane"></i></a>
                             </div>
-                            <h3>Worldwide delivery</h3>
-                            <p>We deliver to the following countries: USA, Canada, Europe, Australia</p>
+                            <h3>Envios a toda España</h3>
+                            <p>Nuestros envios se encuentran disponibles a toda la península y las Islas Baleares e Islas Canarias</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -53,8 +53,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-history"></i></a>
                             </div>
-                            <h3>60 days money back guranty!</h3>
-                            <p>Not happy with our product, feel free to return it, we will refund 100% your money!</p>
+                            <h3>¡60 dias de garantia!</h3>
+                            <p>No estas contento con tu producto, devuelvenoslo gratis y te reembolsaremos el 100% de tu dinero!</p>
                         </div>
                     </div>
                 </div>
@@ -62,10 +62,10 @@
         </section>
         <!-- end: DELIVERY INFO -->
         <!-- Footer -->
-        <footer>
+        <footer id="footer">
             <div class="copyright-content">
                 <div class="container">
-                    <div class="copyright-text text-center">&copy; 2019 POLO - Responsive Multi-Purpose HTML5 Template. All Rights Reserved.<a href="//www.inspiro-media.com" target="_blank" rel="noopener"> INSPIRO</a> </div>
+                    <div class="copyright-text text-center">© 2021 MDLR - Hecho con amor y cariño en Madrid.</div>
                 </div>
             </div>
         </footer>

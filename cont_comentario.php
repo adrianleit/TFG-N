@@ -59,7 +59,6 @@ function mostrar($producto)
                     <div class="text">
                         <h5 class="name"><?php echo ($fila[0]); ?></h5>
                         <!-- <span class="comment_date">Posted at 15:32h, 06 December</span> -->
-                        <a class="comment-reply-link" href="#">Reply</a>
                         <div class="text_holder">
                             <p><?php echo ($fila[2]); ?></p>
                         </div>
