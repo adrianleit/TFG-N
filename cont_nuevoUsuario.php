@@ -31,8 +31,7 @@ isset($_POST['ciudad']) && isset($_POST['codigoPostal']) && isset($_POST['provin
     lineaDireccion1, pais) VALUES ('$nombre', '$id_usuario', '$email', '$clave', '$apellido', '$provincia', 
     $codigoPostal, $telefono, '$lineaDireccion1', '$pais');";
     if ($conn->query($sql) === TRUE) {
-        echo "El usuario ha sido introducido en la base de datos";
-        header('Location:nuevoUsuario.php');
+        echo("<script>window.location.href='index.php'</script>");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

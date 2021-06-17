@@ -99,8 +99,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-gift"></i></a>
                             </div>
-                            <h3>Envios gratis a partir de envios 60€</h3>
-                            <p>Haz envios con un importe superior a 60€</p>
+                            <h3>Envíos gratuitos</h3>
+                            <p>En MDLR cargamos nosotros con los gastos de envío</p>
                         </div>
                     </div>
                     <div class="col-lg-4">

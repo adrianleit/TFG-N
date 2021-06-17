@@ -8,7 +8,7 @@ function sumar() {
 }
 
 function menos() {
-    if (document.getElementById('cantidad').value > 0) {
+    if (document.getElementById('cantidad').value > 1) {
         $('#cantidad').val(Number($('#cantidad').val()) - 1).change();
     }
 }

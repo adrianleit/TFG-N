@@ -1,11 +1,19 @@
 <?php
 session_start();
 ?>
-<title>StreetWear</title>
-<link rel="shortcut icon" href="./images/logo.jpg" type="image/x-icon">
-<link href="./css/plugins.css" rel="stylesheet">
-<link href="./css/style.css" rel="stylesheet">
-<link href="./css/custom.css" rel="stylesheet">
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDLR | Usuario Nuevo</title>
+    <link rel="shortcut icon" href="images/icono.png" type="image/x-icon">
+    <link href="./css/plugins.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,7 +25,7 @@ session_start();
                         <div class="card-body">
                             <h3 class="mb-5">Registro</h3>
                             <form id="form1" class="form-validate">
-                                <div class="h5 mb-4">Account details</div>
+                                <div class="h5 mb-4">Detalles de la Cuenta</div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="username">Id de Usuario</label>
@@ -54,8 +62,8 @@ session_start();
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="surname">Apellidos</label>
-                                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Solo una apellido" required>
+                                        <label for="surname">Apellido</label>
+                                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Solo un apellido" required>
                                         <div id="error_apellido">
                                             <p class='error'>El apellido debe tener minimo 1 caracter y maximo 100, y debe ir sin espacios</p>
                                         </div>

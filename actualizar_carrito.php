@@ -9,6 +9,11 @@ session_start();
 // $_SESSION['carrito'][6] => Sexo
 // $_SESSION['carrito'][7] => Nombre
 $operacion = $_POST['operacion'];
+if(isset($_SESSION["NombreCliente"])){
+    $usuario = $_SESSION["NombreCliente"];
+} else {
+    $usuario = 'anonimo';
+}
 
 // Si la operacion es borrar o actualizar que me coga las demas variables sino no
 if (($operacion == "actualizar") || ($operacion == "borrar")) {
@@ -72,6 +77,7 @@ function mostrar()
                 <div class="table table-sm table-striped table-responsive">
                     <?php
                     if (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
+
                     ?>
                         <table class="table">
                             <thead>
@@ -95,6 +101,7 @@ function mostrar()
                                 // $_SESSION['carrito'][][5] => Parte de Ropa
                                 // $_SESSION['carrito'][][6] => Sexo
                                 // $_SESSION['carrito'][][7] => Nombre
+                                // $_SESSION['carrito'][][8] => Usuario
                                 $precio_total=0;
                                 for ($i = 0; $i < count($_SESSION['carrito']); $i++) {
                                     // $producto=explode(",",$_SESSION['carrito']);
@@ -141,7 +148,7 @@ function mostrar()
                 <div class="row">
                     <div class="col-lg-6 p-r-10 ">
                         <div class="table-responsive">
-                            <h4>Cart Subtotal</h4>
+                            <h4>Subtotal</h4>
                             <table class="table">
                                 <tbody>
                                     <tr>
@@ -171,7 +178,7 @@ function mostrar()
                                 </tbody>
                             </table>
                         </div>
-                        <a href="#" class="btn icon-left float-right"><span>Proceder a la Compra</span></a>
+                        <a href="shop-checkout-completed.php" class="btn icon-left float-right"><span>Proceder a la Compra</span></a>
                     </div>
                 </div>
             <?php

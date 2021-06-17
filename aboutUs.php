@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="images/icono.png">   
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
-    <title>POLO | The Multi-Purpose HTML5 Template</title>
+    <title>MDLR | About Us</title>
     <!-- Stylesheets & Fonts -->
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -123,7 +123,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <p class="lead">Our awesome clients we've had the pleasure to work with!</p>
+                        <p class="lead">¡Nuestras increíbles marcas con las que tenemos el placer de trabajar!</p>
                     </div>
                 </div>
                 <ul class="grid grid-4-columns">

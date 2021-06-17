@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="images/icono.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
-    <title>POLO | The Multi-Purpose HTML5 Template</title>
+    <title>MDLR | Login</title>
     <!-- Stylesheets & Fonts -->
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -33,8 +33,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
                                 <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" type="email" name="email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-                                    anyone else.</small>
+                                <small id="emailHelp" class="form-text text-muted">No usaremos tu email para otros fines.</small>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Contraseña</label>

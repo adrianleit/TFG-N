@@ -83,8 +83,6 @@
                                             </div>
                                             <div class="product-price"><ins><?php echo ($fila[2]) ?>&euro;</ins>
                                             </div>
-                                            <div class="product-reviews"><a href="#">3 customer reviews</a>
-                                            </div>
                                             <div class="seperator m-b-10"></div>
                                             <?php echo ("<p>$fila[6]</p>") ?>
                                             <div class="seperator m-t-20 m-b-10"></div>
@@ -106,7 +104,7 @@
                                                         </li>
                                                         <li>
                                                             <label>
-                                                                <input type="radio" value="M" name="size"><span>M</span>
+                                                                <input type="radio" value="M" name="size" checked><span>M</span>
                                                             </label>
                                                         </li>
                                                         <li>
@@ -196,8 +194,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-gift"></i></a>
                             </div>
-                            <h3>Envios gratis a partir de envios 60€</h3>
-                            <p>Haz envios con un importe superior a 60€</p>
+                            <h3>Envíos gratuitos</h3>
+                            <p>En MDLR cargamos nosotros con los gastos de envío</p>
                         </div>
                     </div>
                     <div class="col-lg-4">

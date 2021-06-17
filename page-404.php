@@ -3,12 +3,13 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />    <meta name="author" content="INSPIRO" />    
-	<meta name="description" content="Themeforest Template Polo, html template">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />    
+    <meta name="author" content="Adrian Delgado y Alejandro Garcia" />    
+	<meta name="description" content="Tienda MDLR">
     <link rel="icon" type="image/png" href="images/icono.png">   
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
-    <title>POLO | The Multi-Purpose HTML5 Template</title>
+    <title>MDLR | Home</title>
     <!-- Stylesheets & Fonts -->
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">

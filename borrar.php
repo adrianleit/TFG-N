@@ -1,6 +1,6 @@
 <?php
     session_start();
-    unset($_SESSION["NombreCliente"]);
+    session_destroy();
     /* Redirigir */
     header('Location:index.php');
 

@@ -102,7 +102,8 @@
                             if (isset($_SESSION["NombreCliente"])) {
                                 echo ("<li class='dropdown'><a><i class='fa fa-power-off'></i>" . $_SESSION["NombreCliente"]). "</a>";
                                 echo ("<ul class='dropdown-menu'>");
-                                echo ("<li><a href='./borrar.php'>Cerrar Sesion</a></li>");
+                                echo ("<li><a href='profile.php'>Mi Perfil</a></li>");
+                                echo ("<li><a href='borrar.php'>Cerrar Sesion</a></li>");
                                 echo ("</ul>");
                                 echo ("</li>");
                             } else {

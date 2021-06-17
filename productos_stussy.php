@@ -100,8 +100,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-gift"></i></a>
                             </div>
-                            <h3>Envios gratuitos</h3>
-                            <p>En MDLR cargamos nosotros con los gastos de envio</p>
+                            <h3>Envíos gratuitos</h3>
+                            <p>En MDLR cargamos nosotros con los gastos de envío</p>
                         </div>
                     </div>
                     <div class="col-lg-4">

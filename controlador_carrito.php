@@ -21,7 +21,7 @@ if (
     $sexo = $_POST['sexo'];
     $nombre = $_POST['nombre'];
     if (!isset($_SESSION["id_usuario"])) {
-        $usuario = "";
+        $usuario = "anonimo";
     } else {
         $usuario = $_SESSION["id_usuario"];
     }

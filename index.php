@@ -102,7 +102,8 @@
                                     if (isset($_SESSION["NombreCliente"])) {
                                         echo ("<li class='dropdown'><a><i class='fa fa-power-off'></i>" . $_SESSION["NombreCliente"]) . "</a>";
                                         echo ("<ul class='dropdown-menu'>");
-                                        echo ("<li><a href='./borrar.php'>Cerrar Sesion</a></li>");
+                                        echo ("<li><a href='profile.php'>Mi Perfil</a></li>");
+                                        echo ("<li><a href='borrar.php'>Cerrar Sesion</a></li>");
                                         echo ("</ul>");
                                         echo ("</li>");
                                     } else {
@@ -161,19 +162,19 @@
                     <div class="col-lg-4">
                         <div data-animate="fadeInUp" data-animate-delay="0">
                             <h4>Multiplataforma</h4>
-                            <p>En MDLR podras realizar todas tus compras desde cualquier plataforma, ya sea tu ordenador, tablet o teléfono móvil.</p>
+                            <p>En MDLR podrás realizar todas tus compras desde cualquier plataforma, ya sea tu ordenador, tablet o teléfono móvil.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div data-animate="fadeInUp" data-animate-delay="200">
                             <h4>Descuentos</h4>
-                            <p>Pronto dispondran de codigos de descuento canjeables a la hora de comprar sus prendas favoritas</p>
+                            <p>Pronto dispondrán de códigos de descuento canjeables a la hora de comprar sus prendas favoritas.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div data-animate="fadeInUp" data-animate-delay="400">
                             <h4>Novedades</h4>
-                            <p>Dispondrá de las novedades de cada marca.</p>
+                            <p>Seremos los primeros en disponer de las novedades de cada marca.</p>
                         </div>
                     </div>
                 </div>
