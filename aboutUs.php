@@ -4,7 +4,8 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />    <meta name="author" content="Adrian Delgado y Alejandro Garcia" />    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />    
+    <meta name="author" content="Angel Criado, Adrian Delgado y Sergio Jimenez" />    
 	<meta name="description" content="Tienda
  MDLR">
     <link rel="icon" type="image/png" href="images/icono.png">   
@@ -30,7 +31,7 @@
             <div class="container">
                 <div class="page-title">
                 <h1 class="text-uppercase text-medium">SOBRE NOSOTROS</h1>
-                    <span>De Madrid al cielo since 2021!</span>
+                    <span>De Madrid al cielo since 2022!</span>
                 </div>
             </div>
         </section>
@@ -54,7 +55,7 @@
                     <span class="lead">¡Conocenos en detalle!</span>
                 </div>
                 <div class="row team-members team-members-shadow m-b-40">
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <div class="team-member">
                             <div class="team-image">
                                 <img src="images/clients/adrian2.jpg">
@@ -84,15 +85,45 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <div class="team-member">
                             <div class="team-image">
-                                <img src="images/clients/alex.png">
+                                <img src="images/clients/prueba.png">
                             </div>
                             <div class="team-desc">
-                                <h3>Alejandro García</h3>
+                                <h3>Ángel Criado</h3>
                                 <span>Coofundador</span>
-                                <p>Ideólogo de MDLR. Se define como una persona con capacidad de liderazgo, inteligente, trabajador y sobretodo gran compañero de su socio Adrián.</p>
+                                <p>Ideólogo de MDLR. Destaca por sus grandes capacidades para la innovación tanto al uso de funcionalidades como al modelo de negocio.</p>
+                                <div class="align-center">
+                                    <a class="btn btn-xs btn-slide btn-light" href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <span>Facebook</span>
+                                    </a>
+                                    <a class="btn btn-xs btn-slide btn-light" href="#" data-width="100">
+                                        <i class="fab fa-twitter"></i>
+                                        <span>Twitter</span>
+                                    </a>
+                                    <a class="btn btn-xs btn-slide btn-light" href="#" data-width="118">
+                                        <i class="fab fa-instagram"></i>
+                                        <span>Instagram</span>
+                                    </a>
+                                    <a class="btn btn-xs btn-slide btn-light" href="mailto:#" data-width="80">
+                                        <i class="icon-mail"></i>
+                                        <span>Mail</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <div class="team-image">
+                                <img src="images/clients/prueba.png">
+                            </div>
+                            <div class="team-desc">
+                                <h3>Sergio Jimenez</h3>
+                                <span>Coofundador</span>
+                                <p>Ideólogo de MDLR. Se define como una persona con capacidad de liderazgo, inteligente, trabajador y sobretodo gran compañero de sus socios Adrián y Ángel.</p>
                                 <div class="align-center">
                                     <a class="btn btn-xs btn-slide btn-light" href="#">
                                         <i class="fab fa-facebook-f"></i>
@@ -151,7 +182,7 @@
     <footer id="footer">
         <div class="copyright-content">
             <div class="container">
-                <div class="copyright-text text-center">© 2021 MDLR - Hecho con amor y cariño en Madrid.</div>
+                <div class="copyright-text text-center">© 2022 MDLR - Hecho con amor y cariño en Madrid.</div>
             </div>
         </div>
     </footer>
